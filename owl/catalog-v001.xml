@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://emmo.info/emmo/1.0.0-beta2/middle" uri="emmo/emmo-1.0.0-beta2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl" uri="bfo/bfo-2020.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://purl.obolibrary.org/obo/chebi.owl" uri="MLO/CHEBI/chebi_lite_nodeprecated.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://purl.obolibrary.org/obo/chebi-in-bfo.owl" uri="MLO/CHEBI/chebi-in-bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl" uri="dolce/CommonSenseMapping.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/DLP_397.owl" uri="dolce/DLP_397.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl" uri="dolce/DOLCE-Lite.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl" uri="dolce/ExtendedDnS.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl" uri="dolce/FunctionalParticipation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/InformationObjects.owl" uri="dolce/InformationObjects.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/ModalDescriptions.owl" uri="dolce/ModalDescriptions.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/Plans.owl" uri="dolce/Plans.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/SocialUnits.owl" uri="dolce/SocialUnits.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/SpatialRelations.owl" uri="dolce/SpatialRelations.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1639573801879" name="http://www.loa-cnr.it/ontologies/TemporalRelations.owl" uri="dolce/TemporalRelations.owl"/>
+    </group>
+</catalog>

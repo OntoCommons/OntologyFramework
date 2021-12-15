@@ -1,0 +1,270 @@
+@prefix : <http://ontocommons.eu/meta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://ontocommons.eu/meta> .
+
+<http://ontocommons.eu/meta> rdf:type owl:Ontology ;
+                              owl:imports <http://emmo.info/emmo/1.0.0-beta2/middle> ,
+                                          <http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl> ,
+                                          <http://www.loa-cnr.it/ontologies/DLP_397.owl> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ontocommons.eu/meta#b814be49_5ee7_4da2_9f7c_53990d2cd93d
+:b814be49_5ee7_4da2_9f7c_53990d2cd93d rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                      rdfs:domain :b424c807_103d_4682_8419_465efda24e9f ;
+                                      rdfs:range :b424c807_103d_4682_8419_465efda24e9f ;
+                                      skos:prefLabel "DOLCERelation"@en .
+
+
+###  http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82
+<http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                  rdfs:domain <http://ontocommons.eu/meta#29eb2a13_30ce_4419_9828_1b61d3b265a7> ;
+                                                                  rdfs:range <http://ontocommons.eu/meta#29eb2a13_30ce_4419_9828_1b61d3b265a7> ;
+                                                                  skos:prefLabel "BFORelation"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+<http://purl.obolibrary.org/obo/BFO_0000054> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+<http://purl.obolibrary.org/obo/BFO_0000055> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000056
+<http://purl.obolibrary.org/obo/BFO_0000056> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000057
+<http://purl.obolibrary.org/obo/BFO_0000057> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000058
+<http://purl.obolibrary.org/obo/BFO_0000058> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000059
+<http://purl.obolibrary.org/obo/BFO_0000059> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000062
+<http://purl.obolibrary.org/obo/BFO_0000062> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000063
+<http://purl.obolibrary.org/obo/BFO_0000063> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000066
+<http://purl.obolibrary.org/obo/BFO_0000066> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000084
+<http://purl.obolibrary.org/obo/BFO_0000084> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000101
+<http://purl.obolibrary.org/obo/BFO_0000101> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000108
+<http://purl.obolibrary.org/obo/BFO_0000108> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000117
+<http://purl.obolibrary.org/obo/BFO_0000117> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000124
+<http://purl.obolibrary.org/obo/BFO_0000124> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000127
+<http://purl.obolibrary.org/obo/BFO_0000127> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000132
+<http://purl.obolibrary.org/obo/BFO_0000132> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000153
+<http://purl.obolibrary.org/obo/BFO_0000153> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000171
+<http://purl.obolibrary.org/obo/BFO_0000171> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000176
+<http://purl.obolibrary.org/obo/BFO_0000176> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000178
+<http://purl.obolibrary.org/obo/BFO_0000178> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000183
+<http://purl.obolibrary.org/obo/BFO_0000183> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000184
+<http://purl.obolibrary.org/obo/BFO_0000184> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000185
+<http://purl.obolibrary.org/obo/BFO_0000185> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000194
+<http://purl.obolibrary.org/obo/BFO_0000194> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000195
+<http://purl.obolibrary.org/obo/BFO_0000195> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000199
+<http://purl.obolibrary.org/obo/BFO_0000199> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000200
+<http://purl.obolibrary.org/obo/BFO_0000200> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000210
+<http://purl.obolibrary.org/obo/BFO_0000210> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000216
+<http://purl.obolibrary.org/obo/BFO_0000216> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000218
+<http://purl.obolibrary.org/obo/BFO_0000218> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000221
+<http://purl.obolibrary.org/obo/BFO_0000221> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000222
+<http://purl.obolibrary.org/obo/BFO_0000222> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000223
+<http://purl.obolibrary.org/obo/BFO_0000223> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000224
+<http://purl.obolibrary.org/obo/BFO_0000224> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation
+<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i
+<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation
+<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation-i
+<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation-i> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:broaderTransitive ;
+             owl:inverseOf skos:narrower .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+skos:broaderTransitive rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf skos:semanticRelation ;
+                       owl:inverseOf skos:narrowerTransitive ;
+                       rdf:type owl:TransitiveProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:narrowerTransitive .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+skos:narrowerTransitive rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf skos:semanticRelation ;
+                        rdf:type owl:TransitiveProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+skos:related rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:semanticRelation ;
+             rdf:type owl:SymmetricProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+skos:semanticRelation rdf:type owl:ObjectProperty ;
+                      rdfs:domain skos:Concept ;
+                      rdfs:range skos:Concept .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ontocommons.eu/meta#b424c807_103d_4682_8419_465efda24e9f
+:b424c807_103d_4682_8419_465efda24e9f rdf:type owl:Class ;
+                                      skos:prefLabel "DOLCE"@en .
+
+
+###  http://ontocommons.eu/meta#29eb2a13_30ce_4419_9828_1b61d3b265a7
+<http://ontocommons.eu/meta#29eb2a13_30ce_4419_9828_1b61d3b265a7> rdf:type owl:Class ;
+                                                                  skos:prefLabel "BFO"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000001
+<http://purl.obolibrary.org/obo/BFO_0000001> rdfs:subClassOf <http://ontocommons.eu/meta#29eb2a13_30ce_4419_9828_1b61d3b265a7> .
+
+
+###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#particular
+<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#particular> rdfs:subClassOf :b424c807_103d_4682_8419_465efda24e9f .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://ontocommons.eu/meta#ef375d6f_2657_4624_b355_5b0c133a6119
+:ef375d6f_2657_4624_b355_5b0c133a6119 rdf:type owl:NamedIndividual ;
+                                      <http://purl.obolibrary.org/obo/BFO_0000056> <http://ontocommons.eu/meta#11cfa332_6783_44be_a8a3_ee8f9f243a26> ;
+                                      skos:prefLabel "test2"@en .
+
+
+###  http://ontocommons.eu/meta#11cfa332_6783_44be_a8a3_ee8f9f243a26
+<http://ontocommons.eu/meta#11cfa332_6783_44be_a8a3_ee8f9f243a26> rdf:type owl:NamedIndividual ;
+                                                                  skos:prefLabel "test3"@en .
+
+
+###  http://ontocommons.eu/meta#18b8f576_28b7_4ce1_b970_280c704b1f3c
+<http://ontocommons.eu/meta#18b8f576_28b7_4ce1_b970_280c704b1f3c> rdf:type owl:NamedIndividual ,
+                                                                           <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                                                  skos:prefLabel "test"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
