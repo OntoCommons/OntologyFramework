@@ -15,49 +15,49 @@
 #    Object Properties
 #################################################################
 
-###  http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f
-<http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> rdf:type owl:ObjectProperty ;
-                                                                        skos:prefLabel "CHEBIRelation"@en .
+###  http://ontocommons.eu/chebi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f
+:baf0e642_af4b_4927_9a00_b8cc4fc48c6f rdf:type owl:ObjectProperty ;
+                                      skos:prefLabel "CHEBIRelation"@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000051
-<http://purl.obolibrary.org/obo/BFO_0000051> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/BFO_0000051> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000087
-<http://purl.obolibrary.org/obo/RO_0000087> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/RO_0000087> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/chebi#has_functional_parent
-<http://purl.obolibrary.org/obo/chebi#has_functional_parent> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/chebi#has_functional_parent> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/chebi#has_major_microspecies_at_pH_7_3
-<http://purl.obolibrary.org/obo/chebi#has_major_microspecies_at_pH_7_3> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/chebi#has_major_microspecies_at_pH_7_3> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/chebi#has_parent_hydride
-<http://purl.obolibrary.org/obo/chebi#has_parent_hydride> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/chebi#has_parent_hydride> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of
-<http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of
-<http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/chebi#is_enantiomer_of
-<http://purl.obolibrary.org/obo/chebi#is_enantiomer_of> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/chebi#is_enantiomer_of> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/chebi#is_substituent_group_from
-<http://purl.obolibrary.org/obo/chebi#is_substituent_group_from> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/chebi#is_substituent_group_from> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 ###  http://purl.obolibrary.org/obo/chebi#is_tautomer_of
-<http://purl.obolibrary.org/obo/chebi#is_tautomer_of> rdfs:subPropertyOf <http://ontocommons.eu/chebbi-map#baf0e642_af4b_4927_9a00_b8cc4fc48c6f> .
+<http://purl.obolibrary.org/obo/chebi#is_tautomer_of> rdfs:subPropertyOf :baf0e642_af4b_4927_9a00_b8cc4fc48c6f .
 
 
 #################################################################
@@ -76,8 +76,20 @@
 <http://purl.obolibrary.org/obo/CHEBI_24433> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> .
 
 
+###  http://purl.obolibrary.org/obo/CHEBI_33250
+<http://purl.obolibrary.org/obo/CHEBI_33250> rdfs:subClassOf <http://emmo.info/emmo#EMMO_eb77076b_a104_42ac_a065_798b2d2809ad> ,
+                                                             <http://purl.obolibrary.org/obo/BFO_0000030> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/CHEBI_33250> ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://emmo.info/emmo#EMMO_eb77076b_a104_42ac_a065_798b2d2809ad> ;
+   rdfs:comment "CHEBI considers an atom as a neutral atom (Z electrons), while the EMMO concept of atom comprises also ions. For this reason the CHEBI atom concept is a subclass of the EMMO atom concept."
+ ] .
+
+
 ###  http://purl.obolibrary.org/obo/CHEBI_36342
-<http://purl.obolibrary.org/obo/CHEBI_36342> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+<http://purl.obolibrary.org/obo/CHEBI_36342> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> .
 
 
 ###  http://purl.obolibrary.org/obo/CHEBI_50906
