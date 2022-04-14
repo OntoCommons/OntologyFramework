@@ -1,0 +1,486 @@
+Prefix(:=<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic>
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic>
+Annotation(rdfs:comment "DOLCE-basic in OWL. OWL version engineered by Laure Vieu and Daniele Porello, based on DOLCE from Wonderweb Deliverable D18 and on more recent work by Claudio Masolo and the LOA. Reference to numbered axioms from D18.
+DOLCE-basic does not include the n-ary, n>2, relations of DOLCE. For some of these relations with a time argument, a constant variant (already in DOLCE or not) is included.
+NB: DOLCE-basic is a module of another version of DOLCE in OWL which includes n-ary, n>2, relations of DOLCE using the W3C-recommended approach of reifying relation instances. 
+
+Beta version!  Do not distribute.
+
+We seek feedback especially regarding whether users understand or not what are the classes and the relations and how to use them.
+Of course, feedback regarding possible incoherences would be extremely useful as well.
+Annotation of the axioms is very patchy, we are still working on it, so we do not currently seek feedback on these annotations."^^xsd:string)
+
+Declaration(Class(:Abstract))
+Declaration(Class(:AbstractQuality))
+Declaration(Class(:AbstractRegion))
+Declaration(Class(:Accomplishment))
+Declaration(Class(:Achievement))
+Declaration(Class(:AgentivePhysicalObject))
+Declaration(Class(:AgentiveSocialObject))
+Declaration(Class(:AmountOfMatter))
+Declaration(Class(:ArbitrarySum))
+Declaration(Class(:Endurant))
+Declaration(Class(:Event))
+Declaration(Class(:Feature))
+Declaration(Class(:MentalObject))
+Declaration(Class(:NonAgentivePhysicalObject))
+Declaration(Class(:NonAgentiveSocialObject))
+Declaration(Class(:NonPhysicalEndurant))
+Declaration(Class(:NonPhysicalObject))
+Declaration(Class(:Particular))
+Declaration(Class(:Perdurant))
+Declaration(Class(:PhysicalEndurant))
+Declaration(Class(:PhysicalObject))
+Declaration(Class(:PhysicalQuality))
+Declaration(Class(:PhysicalRegion))
+Declaration(Class(:Process))
+Declaration(Class(:Quality))
+Declaration(Class(:Region))
+Declaration(Class(:SocialAgent))
+Declaration(Class(:SocialObject))
+Declaration(Class(:Society))
+Declaration(Class(:SpaceRegion))
+Declaration(Class(:SpatialLocation))
+Declaration(Class(:State))
+Declaration(Class(:Stative))
+Declaration(Class(:TemporalLocation))
+Declaration(Class(:TemporalQuality))
+Declaration(Class(:TemporalRegion))
+Declaration(Class(:TimeInterval))
+Declaration(ObjectProperty(:constantConstituentOf))
+Declaration(ObjectProperty(:constantPartOf))
+Declaration(ObjectProperty(:constantParticipantOf))
+Declaration(ObjectProperty(:constantProperPartOf))
+Declaration(ObjectProperty(:constantQualeOf))
+Declaration(ObjectProperty(:constantlyOverlaps))
+Declaration(ObjectProperty(:constantlySpatiallyLocatedAt))
+Declaration(ObjectProperty(:directQualityOf))
+Declaration(ObjectProperty(:overlaps))
+Declaration(ObjectProperty(:partOf))
+Declaration(ObjectProperty(:presentAt))
+Declaration(ObjectProperty(:properPartOf))
+Declaration(ObjectProperty(:qualeOf))
+Declaration(ObjectProperty(:specificallyDependsOn))
+Declaration(ObjectProperty(:temporalPartOf))
+Declaration(ObjectProperty(:temporallyLocatedAt))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :constantConstituentOf (:constantConstituentOf)
+
+AnnotationAssertion(rdfs:comment :constantConstituentOf "constantConstituentOf is the constant version of Constitution which is a ternary relation between two endurants x, y and time interval t or between two perdurants x, y and time interval t. The intended interpretation is that x constitutes y over the time interval t.
+In this constant version, the entity x constitutes y during the whole existence of y.")
+SubObjectPropertyOf(:constantConstituentOf ObjectInverseOf(:specificallyDependsOn))
+TransitiveObjectProperty(:constantConstituentOf)
+ObjectPropertyDomain(:constantConstituentOf ObjectUnionOf(:NonPhysicalEndurant :Perdurant :PhysicalEndurant))
+ObjectPropertyRange(:constantConstituentOf ObjectUnionOf(:NonPhysicalEndurant :Perdurant :PhysicalEndurant))
+
+# Object Property: :constantPartOf (:constantPartOf)
+
+AnnotationAssertion(rdfs:comment :constantPartOf "ConstantPartOf is the constant version of Temporary Parthood which is a ternary relation between two endurants x, y and a time interval t. The intended interpretation is that the endurant x is a part of the endurant y over the time interval t.
+In this constant version, the endurant x is part of the endurant y during the whole existence of y.")
+SubObjectPropertyOf(:constantPartOf :constantlyOverlaps)
+TransitiveObjectProperty(:constantPartOf)
+ObjectPropertyDomain(Annotation(rdfs:comment "From Dd25, Ad10") :constantPartOf :Endurant)
+ObjectPropertyRange(Annotation(rdfs:comment "From Dd25, Ad10") :constantPartOf :Endurant)
+
+# Object Property: :constantParticipantOf (:constantParticipantOf)
+
+AnnotationAssertion(rdfs:comment :constantParticipantOf "constantParticipantOf is the constant version of Participation which is a ternary relation between an endurant x, a perdurant y, and a time interval t. The intended interpretation is that x participates in y at time t. Every perdurant has at least an endurant that participates in it, and every endurant participates in some perdurant. 
+In this constant version, the endurant x participates in the perdurant y during the whole existence of y.")
+SubObjectPropertyOf(:constantParticipantOf :specificallyDependsOn)
+SubObjectPropertyOf(:constantParticipantOf ObjectInverseOf(:specificallyDependsOn))
+ObjectPropertyDomain(:constantParticipantOf :Endurant)
+ObjectPropertyRange(:constantParticipantOf :Perdurant)
+
+# Object Property: :constantProperPartOf (:constantProperPartOf)
+
+AnnotationAssertion(rdfs:comment :constantProperPartOf "constantProperPartOf is the irreflexive specialization of the constantPartOf relation.")
+SubObjectPropertyOf(:constantProperPartOf :constantPartOf)
+TransitiveObjectProperty(:constantProperPartOf)
+ObjectPropertyDomain(:constantProperPartOf :Endurant)
+ObjectPropertyRange(:constantProperPartOf :Endurant)
+
+# Object Property: :constantQualeOf (:constantQualeOf)
+
+AnnotationAssertion(rdfs:comment :constantQualeOf "constantQualeOf is the constant version of Temporary Quale Of which is a ternary relation among a physical region x, a physical quality y and a time interval t or among an abstract region x, an abstract quality y and a time interval t. It relates the quality to its quale (position) at a certain time.
+In this constant version, the region x is the quale of the quality y during the whole existence of y.")
+ObjectPropertyDomain(:constantQualeOf ObjectUnionOf(:AbstractRegion :PhysicalRegion))
+ObjectPropertyRange(:constantQualeOf ObjectUnionOf(:AbstractQuality :PhysicalQuality))
+
+# Object Property: :constantlyOverlaps (:constantlyOverlaps)
+
+AnnotationAssertion(rdfs:comment :constantlyOverlaps "constantlyOverlaps holds between two endurants that share a constant part.")
+SymmetricObjectProperty(:constantlyOverlaps)
+ObjectPropertyDomain(:constantlyOverlaps :Endurant)
+ObjectPropertyRange(:constantlyOverlaps :Endurant)
+
+# Object Property: :constantlySpatiallyLocatedAt (:constantlySpatiallyLocatedAt)
+
+AnnotationAssertion(rdfs:comment :constantlySpatiallyLocatedAt "constantlySpatiallyLocatedAt is a binary relation between a physical or non-physical endurant or a perdurant or a physical quality and the unique space region it is constantly located in.")
+ObjectPropertyDomain(:constantlySpatiallyLocatedAt ObjectUnionOf(:NonPhysicalEndurant :Perdurant :PhysicalEndurant :PhysicalQuality))
+ObjectPropertyRange(:constantlySpatiallyLocatedAt :SpaceRegion)
+
+# Object Property: :directQualityOf (:directQualityOf)
+
+AnnotationAssertion(rdfs:comment :directQualityOf "directQualityOf is a binary relation between a quality and the unique entity it inheres in, which is an endurant or a perdurant. It implies specific constant dependence.")
+SubObjectPropertyOf(:directQualityOf :specificallyDependsOn)
+FunctionalObjectProperty(:directQualityOf)
+ObjectPropertyDomain(Annotation(rdfs:comment "Dd28, Ad38") :directQualityOf :Quality)
+ObjectPropertyRange(Annotation(rdfs:comment "From Dd28, Ad38, Ad43, Ad46, Ad47, Ad48") :directQualityOf ObjectUnionOf(:Endurant :Perdurant))
+
+# Object Property: :overlaps (:overlaps)
+
+AnnotationAssertion(rdfs:comment :overlaps "overlaps holds between two abstracts or two perdurants when they both share a part.")
+SymmetricObjectProperty(:overlaps)
+ObjectPropertyDomain(Annotation(rdfs:comment "From Ad1 and Dd15") :overlaps ObjectUnionOf(:Abstract :Perdurant))
+ObjectPropertyRange(Annotation(rdfs:comment "From Ad1 and Dd15") :overlaps ObjectUnionOf(:Abstract :Perdurant))
+
+# Object Property: :partOf (:partOf)
+
+AnnotationAssertion(rdfs:comment :partOf "PartOf is a binary relation that is a partial ordering between abstract entities or between perdurants. It founds an extensional mereology on each of these two categories.")
+SubObjectPropertyOf(Annotation(rdfs:comment "From Ad5 and Dd15") :partOf :overlaps)
+TransitiveObjectProperty(:partOf)
+ObjectPropertyDomain(Annotation(rdfs:comment "Ad1 (half)") :partOf ObjectUnionOf(:Abstract :Perdurant))
+ObjectPropertyRange(Annotation(rdfs:comment "Ad1 (half)") :partOf ObjectUnionOf(:Abstract :Perdurant))
+
+# Object Property: :presentAt (:presentAt)
+
+AnnotationAssertion(rdfs:comment :presentAt "presentAt is a binary relation between an endurant or a perdurant or a quality x and a time interval t which is part of x's temporal location.")
+ObjectPropertyDomain(Annotation(rdfs:comment "From Dd40, Dd30, Dd31, Dd32, Dd33") :presentAt ObjectUnionOf(:Endurant :Perdurant :Quality))
+ObjectPropertyRange(Annotation(rdfs:comment "From Dd40, Dd30, Dd31, Dd32, Dd33") :presentAt :TimeInterval)
+
+# Object Property: :properPartOf (:properPartOf)
+
+AnnotationAssertion(rdfs:comment :properPartOf "properPartOf is the irreflexive specialization of the partOf relation. (Irreflexivity not captured here, as transitivity is favored)")
+SubObjectPropertyOf(Annotation(rdfs:comment "D14 (half)
+irreflexivity impossible (property implies domain=Thing, and use of Self incompatible with transitivity)") :properPartOf :partOf)
+TransitiveObjectProperty(:properPartOf)
+ObjectPropertyDomain(:properPartOf ObjectUnionOf(:Abstract :Perdurant))
+ObjectPropertyRange(:properPartOf ObjectUnionOf(:Abstract :Perdurant))
+
+# Object Property: :qualeOf (:qualeOf)
+
+AnnotationAssertion(rdfs:comment :qualeOf "aka immediate quale")
+AnnotationAssertion(rdfs:comment :qualeOf "qualeOf is a binary relation between a temporal region and a temporal quality, relating the quality to its quale (position in the quality space).")
+ObjectPropertyDomain(Annotation(rdfs:comment "Ad52") :qualeOf :TemporalRegion)
+ObjectPropertyRange(Annotation(rdfs:comment "Ad52") :qualeOf :TemporalQuality)
+
+# Object Property: :specificallyDependsOn (:specificallyDependsOn)
+
+AnnotationAssertion(rdfs:comment :specificallyDependsOn "Specific Constant Dependence")
+AnnotationAssertion(rdfs:comment :specificallyDependsOn "specificallyDependsOn is a binary relation between two entities x, y present in time, i.e., endurants, perdurants or qualities, with the intended interpretation that the existence of x specifically and constantly depends on the existence of y.")
+TransitiveObjectProperty(:specificallyDependsOn)
+ObjectPropertyDomain(Annotation(rdfs:comment "From Dd69") :specificallyDependsOn ObjectUnionOf(:Endurant :Perdurant :Quality))
+ObjectPropertyRange(Annotation(rdfs:comment "From Dd69") :specificallyDependsOn ObjectUnionOf(:Endurant :Perdurant :Quality))
+
+# Object Property: :temporalPartOf (:temporalPartOf)
+
+AnnotationAssertion(rdfs:comment :temporalPartOf "temporalPartOf is the specialisation of the partOf relation between two perdurants x and y, x being a temporal slice of y, that is, a maximal part of y during some time interval.")
+SubObjectPropertyOf(Annotation(rdfs:comment "Dd54 (third)") :temporalPartOf :partOf)
+TransitiveObjectProperty(:temporalPartOf)
+ObjectPropertyDomain(Annotation(rdfs:comment "Dd54 (third)") :temporalPartOf :Perdurant)
+ObjectPropertyRange(Annotation(rdfs:comment "From Dd54 and Ad2") :temporalPartOf :Perdurant)
+
+# Object Property: :temporallyLocatedAt (:temporallyLocatedAt)
+
+AnnotationAssertion(rdfs:comment :temporallyLocatedAt "temporallyLocatedAt is a binary relation between an endurant or a perdurant or a quality and the unique time interval it is located in.")
+SubObjectPropertyOf(Annotation(rdfs:comment "definition of pre + reflexivity of p") :temporallyLocatedAt :presentAt)
+FunctionalObjectProperty(:temporallyLocatedAt)
+ObjectPropertyDomain(:temporallyLocatedAt ObjectUnionOf(:Endurant :Perdurant :Quality))
+ObjectPropertyRange(:temporallyLocatedAt :TimeInterval)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Abstract (:Abstract)
+
+AnnotationAssertion(rdfs:comment :Abstract "An Abstract entity is an entity that has neither spatial nor temporal qualities and is not a quality itself (examples: a number, a set, a quality space)."^^xsd:string)
+SubClassOf(:Abstract :Particular)
+SubClassOf(Annotation(rdfs:comment "from Dd15, Ad3") :Abstract ObjectAllValuesFrom(:overlaps :Abstract))
+SubClassOf(Annotation(rdfs:comment "Ad3 (half)") :Abstract ObjectAllValuesFrom(:partOf :Abstract))
+SubClassOf(Annotation(rdfs:comment "from Dd15, Ad3") :Abstract ObjectAllValuesFrom(ObjectInverseOf(:overlaps) :Abstract))
+SubClassOf(Annotation(rdfs:comment "Ad3 (half)") :Abstract ObjectAllValuesFrom(ObjectInverseOf(:partOf) :Abstract))
+DisjointClasses(:Abstract :Endurant)
+DisjointClasses(:Abstract :Perdurant)
+DisjointClasses(:Abstract :Quality)
+
+# Class: :AbstractQuality (:AbstractQuality)
+
+AnnotationAssertion(rdfs:comment :AbstractQuality "An Abstract Quality is a quality that directly inheres to a non-physical endurant (examples: the value of an asset, the rights of the UN general secretary)."^^xsd:string)
+AnnotationAssertion(rdfs:comment :AbstractQuality "Warning: Abstract qualities are not qualities of abstract entities, but of non-physical endurants")
+SubClassOf(:AbstractQuality :Quality)
+SubClassOf(Annotation(rdfs:comment "Ad48 for dQt") :AbstractQuality ObjectAllValuesFrom(:directQualityOf :NonPhysicalEndurant))
+SubClassOf(:AbstractQuality ObjectAllValuesFrom(ObjectInverseOf(:constantQualeOf) :AbstractRegion))
+DisjointClasses(:AbstractQuality :PhysicalQuality)
+DisjointClasses(:AbstractQuality :TemporalQuality)
+
+# Class: :AbstractRegion (:AbstractRegion)
+
+AnnotationAssertion(rdfs:comment :AbstractRegion "An Abstract Region is a region in the abstract quality space for abstract qualities (example: the conventional value of 1 Euro)."^^xsd:string)
+SubClassOf(:AbstractRegion :Region)
+SubClassOf(:AbstractRegion ObjectAllValuesFrom(:constantQualeOf :AbstractQuality))
+SubClassOf(:AbstractRegion ObjectAllValuesFrom(:partOf :AbstractRegion))
+SubClassOf(:AbstractRegion ObjectAllValuesFrom(ObjectInverseOf(:partOf) :AbstractRegion))
+DisjointClasses(:AbstractRegion :PhysicalRegion)
+DisjointClasses(:AbstractRegion :TemporalRegion)
+
+# Class: :Accomplishment (:Accomplishment)
+
+AnnotationAssertion(rdfs:comment :Accomplishment "An Accomplishment is an event which is mereologically non-atomic (examples: a conference, an ascent, a performance)."^^xsd:string)
+SubClassOf(:Accomplishment :Event)
+DisjointClasses(:Accomplishment :Achievement)
+
+# Class: :Achievement (:Achievement)
+
+AnnotationAssertion(rdfs:comment :Achievement "An Achievement is an event which is mereologically atomic (examples: reaching the summit of K2, a departure, a death)."^^xsd:string)
+SubClassOf(:Achievement :Event)
+
+# Class: :AgentivePhysicalObject (:AgentivePhysicalObject)
+
+AnnotationAssertion(rdfs:comment :AgentivePhysicalObject "An Agentive Physical Object is a physical object to which intentions, believes and desires are ascribed (examples: a human person as opposed to a legal person)."^^xsd:string)
+SubClassOf(:AgentivePhysicalObject :PhysicalObject)
+
+# Class: :AgentiveSocialObject (:AgentiveSocialObject)
+
+AnnotationAssertion(rdfs:comment :AgentiveSocialObject "An Agentive Social Object is a social object to which intentions, believes and desires are ascribed (examples: a teacher, a president, a software agent, a nation)."^^xsd:string)
+SubClassOf(:AgentiveSocialObject :SocialObject)
+DisjointClasses(:AgentiveSocialObject :NonAgentiveSocialObject)
+
+# Class: :AmountOfMatter (:AmountOfMatter)
+
+AnnotationAssertion(rdfs:comment :AmountOfMatter "An Amount Of Matter is a physical endurant which has no unity criterion and is mereologically invariant, that is, all its part are essential parts (examples: the gold of my wedding ring, the sand used to make this glass)."^^xsd:string)
+SubClassOf(:AmountOfMatter :PhysicalEndurant)
+DisjointClasses(:AmountOfMatter :Feature)
+DisjointClasses(:AmountOfMatter :PhysicalObject)
+
+# Class: :ArbitrarySum (:ArbitrarySum)
+
+AnnotationAssertion(rdfs:comment :ArbitrarySum "An Arbitrary Sum is an endurant which is the mereological sum of at least a physical and a non-physical endurant."^^xsd:string)
+SubClassOf(:ArbitrarySum :Endurant)
+DisjointClasses(:ArbitrarySum :NonPhysicalEndurant)
+DisjointClasses(:ArbitrarySum :PhysicalEndurant)
+
+# Class: :Endurant (:Endurant)
+
+AnnotationAssertion(rdfs:comment :Endurant "An Endurant is an entity wholly present, i.e., all its proper parts are present, at any time that it is present (examples: a person, a tree, an atom, an idea)."^^xsd:string)
+SubClassOf(:Endurant :Particular)
+SubClassOf(:Endurant ObjectSomeValuesFrom(:temporallyLocatedAt :Particular))
+DisjointClasses(:Endurant :Perdurant)
+DisjointClasses(:Endurant :Quality)
+DisjointUnion(:Endurant :ArbitrarySum :NonPhysicalEndurant :PhysicalEndurant)
+
+# Class: :Event (:Event)
+
+AnnotationAssertion(rdfs:comment :Event "An Event is an anti-cumulative perdurant, i.e., a perdurant that when summed to another perdurant of the same type, gives a perdurant of a different type (examples: closing a door, reaching the top of a mountain, breaking a seal)."^^xsd:string)
+SubClassOf(:Event :Perdurant)
+DisjointClasses(:Event :Stative)
+
+# Class: :Feature (:Feature)
+
+AnnotationAssertion(rdfs:comment :Feature "A Feature is a physical endurant which has a unity criterion and is existentially dependent on another physical endurant, its host (examples: a hole, a bump, an object’s boundary, a stain on a t-shirt)."^^xsd:string)
+SubClassOf(:Feature :PhysicalEndurant)
+DisjointClasses(:Feature :PhysicalObject)
+
+# Class: :MentalObject (:MentalObject)
+
+AnnotationAssertion(rdfs:comment :MentalObject "A Mental Object is a non-physical object which existentially depends on an agentive physical object (examples: a percept, a sense datum)."^^xsd:string)
+SubClassOf(:MentalObject :NonPhysicalObject)
+SubClassOf(:MentalObject ObjectSomeValuesFrom(:specificallyDependsOn :AgentivePhysicalObject))
+DisjointClasses(:MentalObject :SocialObject)
+
+# Class: :NonAgentivePhysicalObject (:NonAgentivePhysicalObject)
+
+AnnotationAssertion(rdfs:comment :NonAgentivePhysicalObject "A Non-Agentive Physical Object is a physical object to which intentions, believes and desires are not ascribed (examples: a pebble, a house, a computer, a human body)."^^xsd:string)
+SubClassOf(:NonAgentivePhysicalObject :PhysicalObject)
+
+# Class: :NonAgentiveSocialObject (:NonAgentiveSocialObject)
+
+AnnotationAssertion(rdfs:comment :NonAgentiveSocialObject "A Non-Agentive Social Object is a social object to which intentions, believes and desires are not ascribed (examples: a law, an economic system, a currency, an asset)."^^xsd:string)
+SubClassOf(:NonAgentiveSocialObject :SocialObject)
+
+# Class: :NonPhysicalEndurant (:NonPhysicalEndurant)
+
+AnnotationAssertion(rdfs:comment :NonPhysicalEndurant "A Non-Physical Endurant is an endurant with no direct spatial quality (examples: democracy, the United Nations, the general secretary of Amnesty International)."^^xsd:string)
+SubClassOf(:NonPhysicalEndurant :Endurant)
+SubClassOf(:NonPhysicalEndurant ObjectAllValuesFrom(:constantConstituentOf :NonPhysicalEndurant))
+SubClassOf(:NonPhysicalEndurant ObjectAllValuesFrom(:constantPartOf :NonPhysicalEndurant))
+SubClassOf(:NonPhysicalEndurant ObjectAllValuesFrom(ObjectInverseOf(:constantConstituentOf) :NonPhysicalEndurant))
+SubClassOf(:NonPhysicalEndurant ObjectAllValuesFrom(ObjectInverseOf(:constantPartOf) :NonPhysicalEndurant))
+SubClassOf(Annotation(rdfs:comment "Approximation of Ad51") :NonPhysicalEndurant ObjectAllValuesFrom(ObjectInverseOf(:directQualityOf) :AbstractQuality))
+DisjointClasses(:NonPhysicalEndurant :PhysicalEndurant)
+
+# Class: :NonPhysicalObject (:NonPhysicalObject)
+
+AnnotationAssertion(rdfs:comment :NonPhysicalObject "A Non-Physical Object is a non-physical endurant with unity criterion (examples: a theory, a topic, a concept)."^^xsd:string)
+SubClassOf(:NonPhysicalObject :NonPhysicalEndurant)
+
+# Class: :Particular (:Particular)
+
+AnnotationAssertion(rdfs:comment :Particular "A Particular is an entity that cannot have instances, in this sense it is opposed to universals (examples: a person, a soccer game, a plan, the color red, a feeling, a fact, a theory, number forty-two)."^^xsd:string)
+DisjointUnion(:Particular :Abstract :Endurant :Perdurant :Quality)
+
+# Class: :Perdurant (:Perdurant)
+
+AnnotationAssertion(rdfs:comment :Perdurant "A Perdurant is an entity that happens in time (examples: a person’s life, a soccer game, the reading of a book, the state of feeling happy). Some perdurants are temporally atomic (example: the change of a letter’s state due to the breaking of the seal)."^^xsd:string)
+SubClassOf(:Perdurant :Particular)
+SubClassOf(:Perdurant ObjectSomeValuesFrom(:temporallyLocatedAt :Particular))
+SubClassOf(:Perdurant ObjectSomeValuesFrom(ObjectInverseOf(:directQualityOf) :TemporalLocation))
+SubClassOf(:Perdurant ObjectAllValuesFrom(:constantConstituentOf :Perdurant))
+SubClassOf(Annotation(rdfs:comment "from Dd15, Ad2") :Perdurant ObjectAllValuesFrom(:overlaps :Perdurant))
+SubClassOf(Annotation(rdfs:comment "Ad2  (half)") :Perdurant ObjectAllValuesFrom(:partOf :Perdurant))
+SubClassOf(:Perdurant ObjectAllValuesFrom(ObjectInverseOf(:constantConstituentOf) :Perdurant))
+SubClassOf(Annotation(rdfs:comment "Ad49 for dQt") :Perdurant ObjectAllValuesFrom(ObjectInverseOf(:directQualityOf) :TemporalQuality))
+SubClassOf(Annotation(rdfs:comment "from Dd15, Ad2") :Perdurant ObjectAllValuesFrom(ObjectInverseOf(:overlaps) :Perdurant))
+SubClassOf(Annotation(rdfs:comment "Ad2 (half)") :Perdurant ObjectAllValuesFrom(ObjectInverseOf(:partOf) :Perdurant))
+DisjointClasses(:Perdurant :Quality)
+
+# Class: :PhysicalEndurant (:PhysicalEndurant)
+
+AnnotationAssertion(rdfs:comment :PhysicalEndurant "A Physical Endurant is an endurant with direct spatial quality (examples: a person, a tree, an atom, the water in a glass, a hole in a wall, the center of the Earth)."^^xsd:string)
+SubClassOf(:PhysicalEndurant :Endurant)
+SubClassOf(:PhysicalEndurant ObjectSomeValuesFrom(ObjectInverseOf(:directQualityOf) :SpatialLocation))
+SubClassOf(:PhysicalEndurant ObjectAllValuesFrom(:constantConstituentOf :PhysicalEndurant))
+SubClassOf(:PhysicalEndurant ObjectAllValuesFrom(:constantPartOf :PhysicalEndurant))
+SubClassOf(:PhysicalEndurant ObjectAllValuesFrom(ObjectInverseOf(:constantConstituentOf) :PhysicalEndurant))
+SubClassOf(:PhysicalEndurant ObjectAllValuesFrom(ObjectInverseOf(:constantPartOf) :PhysicalEndurant))
+SubClassOf(Annotation(rdfs:comment "Approximation of Ad50") :PhysicalEndurant ObjectAllValuesFrom(ObjectInverseOf(:directQualityOf) :PhysicalQuality))
+
+# Class: :PhysicalObject (:PhysicalObject)
+
+AnnotationAssertion(rdfs:comment :PhysicalObject "A Physical Object is a physical endurant with unity criterion (examples: a person, a human body, a house, a computer)."^^xsd:string)
+SubClassOf(:PhysicalObject :PhysicalEndurant)
+DisjointUnion(:PhysicalObject :AgentivePhysicalObject :NonAgentivePhysicalObject)
+
+# Class: :PhysicalQuality (:PhysicalQuality)
+
+AnnotationAssertion(rdfs:comment :PhysicalQuality "A Physical Quality is a quality that directly inheres to a physical endurant (examples: the weight of a pen, the color of an apple)."^^xsd:string)
+SubClassOf(:PhysicalQuality :Quality)
+SubClassOf(Annotation(rdfs:comment "Ad47 for dQt") :PhysicalQuality ObjectAllValuesFrom(:directQualityOf :PhysicalEndurant))
+SubClassOf(:PhysicalQuality ObjectAllValuesFrom(ObjectInverseOf(:constantQualeOf) :PhysicalRegion))
+DisjointClasses(:PhysicalQuality :TemporalQuality)
+
+# Class: :PhysicalRegion (:PhysicalRegion)
+
+AnnotationAssertion(rdfs:comment :PhysicalRegion "A Physical Region is a region in a quality space for physical qualities (examples: the physical space, an area in the color quality space, 80Kg)."^^xsd:string)
+SubClassOf(:PhysicalRegion :Region)
+SubClassOf(:PhysicalRegion ObjectAllValuesFrom(:constantQualeOf :PhysicalQuality))
+DisjointClasses(:PhysicalRegion :TemporalRegion)
+
+# Class: :Process (:Process)
+
+AnnotationAssertion(rdfs:comment :Process "A Process is a stative perdurant such that at some temporal scale some parts are of a different type  (examples: running, writing)."^^xsd:string)
+SubClassOf(:Process :Stative)
+DisjointClasses(:Process :State)
+
+# Class: :Quality (:Quality)
+
+AnnotationAssertion(rdfs:comment :Quality "A Quality is an entity that inheres in an endurant or a perdurant, and that can be perceived or measured (examples: the shape of a book, the color of a car, the size of a t-shirt, the electrical charge of a battery)."^^xsd:string)
+SubClassOf(:Quality :Particular)
+SubClassOf(Annotation(rdfs:comment "Q(x)→ ∃y DQT(x,y)") :Quality ObjectSomeValuesFrom(:directQualityOf :Particular))
+SubClassOf(:Quality ObjectSomeValuesFrom(:temporallyLocatedAt :Particular))
+DisjointUnion(:Quality :AbstractQuality :PhysicalQuality :TemporalQuality)
+
+# Class: :Region (:Region)
+
+AnnotationAssertion(rdfs:comment :Region "A Region is an abstract entity classified by a quality type and with mereological structure, the sum of all the regions of a quality type is called a quality space (examples: the color red is a region in the quality space of color, the red of a rose is a (sub)region of the red region in the quality space of color, the commercial value of 1 Euro is a region in the quality space of commercial values)."^^xsd:string)
+SubClassOf(:Region :Abstract)
+DisjointUnion(:Region :AbstractRegion :PhysicalRegion :TemporalRegion)
+
+# Class: :SocialAgent (:SocialAgent)
+
+AnnotationAssertion(rdfs:comment :SocialAgent "A Social Agent is an individual agentive social object (examples: a teacher, a president, a software agent)."^^xsd:string)
+SubClassOf(:SocialAgent :AgentiveSocialObject)
+DisjointClasses(:SocialAgent :Society)
+
+# Class: :SocialObject (:SocialObject)
+
+AnnotationAssertion(rdfs:comment :SocialObject "A Social Object is a non-physical object which is generically dependent on a community of agents (examples: a person in the legal sense, a client, a law, an economic system)."^^xsd:string)
+SubClassOf(:SocialObject :NonPhysicalObject)
+DisjointUnion(:SocialObject :AgentiveSocialObject :NonAgentiveSocialObject)
+
+# Class: :Society (:Society)
+
+AnnotationAssertion(rdfs:comment :Society "A Society is a collective agentive social object (examples: a nation, the FCA Group, Apple, the European Central Bank)."^^xsd:string)
+SubClassOf(:Society :AgentiveSocialObject)
+
+# Class: :SpaceRegion (:SpaceRegion)
+
+AnnotationAssertion(rdfs:comment :SpaceRegion "A Space Region is a physical region, possibly disconnected, for spatial locations (examples: the region occupied by Earth in this moment, the region where it snowed in the year 1900)."^^xsd:string)
+SubClassOf(:SpaceRegion :PhysicalRegion)
+SubClassOf(:SpaceRegion ObjectAllValuesFrom(:constantQualeOf :SpatialLocation))
+SubClassOf(:SpaceRegion ObjectAllValuesFrom(:partOf :SpaceRegion))
+SubClassOf(:SpaceRegion ObjectAllValuesFrom(ObjectInverseOf(:partOf) :SpaceRegion))
+
+# Class: :SpatialLocation (:SpatialLocation)
+
+AnnotationAssertion(rdfs:comment :SpatialLocation "A Spatial Location is the individual spatial quality of a physical endurant (examples: the spatial quality of the Earth, the spatial quality of a hole, the spatial quality of Adolf Anderssen)."^^xsd:string)
+SubClassOf(:SpatialLocation :PhysicalQuality)
+
+# Class: :State (:State)
+
+AnnotationAssertion(rdfs:comment :State "A State is a stative perdurant such that all its parts are of the same type (examples: being sitting, being open, being happy, being red)."^^xsd:string)
+SubClassOf(:State :Stative)
+SubClassOf(:State ObjectAllValuesFrom(ObjectInverseOf(:partOf) :State))
+
+# Class: :Stative (:Stative)
+
+AnnotationAssertion(rdfs:comment :Stative "A Stative is a cumulative perdurant, i.e., a perdurant that when summed to another perdurant of the same type, gives a perdurant of the same type (examples: sitting, walking, waiting)."^^xsd:string)
+SubClassOf(:Stative :Perdurant)
+
+# Class: :TemporalLocation (:TemporalLocation)
+
+AnnotationAssertion(rdfs:comment :TemporalLocation "A Temporal Location is the temporal quality of a perdurant and is specific to that perdurant, that is, two concurrent perdurants have distinct temporal locations (examples: the temporal quality of World War I, the temporal quality of the Anderssen-Kieseritzky chess play in 1851, the summers of the 20th century)."^^xsd:string)
+SubClassOf(:TemporalLocation :TemporalQuality)
+SubClassOf(Annotation(rdfs:comment "Ad53  (**check**)") :TemporalLocation ObjectSomeValuesFrom(ObjectInverseOf(:qualeOf) :TimeInterval))
+
+# Class: :TemporalQuality (:TemporalQuality)
+
+AnnotationAssertion(rdfs:comment :TemporalQuality "A Temporal Quality is a quality that directly inheres to a perdurant (example: the duration of World War I, the starting time of the 2000 Olympics)."^^xsd:string)
+SubClassOf(:TemporalQuality :Quality)
+SubClassOf(Annotation(rdfs:comment "Ad55") :TemporalQuality ObjectSomeValuesFrom(ObjectInverseOf(:qualeOf) :Particular))
+SubClassOf(Annotation(rdfs:comment "Ad46 for dQt") :TemporalQuality ObjectAllValuesFrom(:directQualityOf :Perdurant))
+
+# Class: :TemporalRegion (:TemporalRegion)
+
+AnnotationAssertion(rdfs:comment :TemporalRegion "A Temporal Region is a region in a quality space for temporal qualities (examples: a time interval, a historical period, a velocity)."^^xsd:string)
+SubClassOf(:TemporalRegion :Region)
+
+# Class: :TimeInterval (:TimeInterval)
+
+AnnotationAssertion(rdfs:comment :TimeInterval "A Time Interval is a temporal region which is an interval or a sum of intervals (examples: the first second of your life,  the Cretaceous time period, the time interval of all winters of the third millennium)."^^xsd:string)
+SubClassOf(:TimeInterval :TemporalRegion)
+SubClassOf(:TimeInterval ObjectAllValuesFrom(:partOf :TimeInterval))
+SubClassOf(Annotation(rdfs:comment "ql(x,y) & T(x) -> TL(y)") :TimeInterval ObjectAllValuesFrom(:qualeOf :TemporalLocation))
+SubClassOf(:TimeInterval ObjectAllValuesFrom(ObjectInverseOf(:partOf) :TimeInterval))
+
+
+SubObjectPropertyOf(Annotation(rdfs:comment "K(x,y,t)∧SLC(x,s,t)∧SLC(y,r,t) → s = r") ObjectPropertyChain(:constantConstituentOf :constantlySpatiallyLocatedAt) :constantlySpatiallyLocatedAt)
+SubObjectPropertyOf(ObjectPropertyChain(:constantConstituentOf :presentAt) :presentAt)
+SubObjectPropertyOf(ObjectPropertyChain(:constantPartOf :presentAt) :presentAt)
+SubObjectPropertyOf(ObjectPropertyChain(:constantParticipantOf :presentAt) :presentAt)
+SubObjectPropertyOf(ObjectPropertyChain(:constantProperPartOf :presentAt) :presentAt)
+SubObjectPropertyOf(ObjectPropertyChain(:constantlyOverlaps :presentAt) :presentAt)
+SubObjectPropertyOf(ObjectPropertyChain(:presentAt ObjectInverseOf(:partOf)) :presentAt)
+SubObjectPropertyOf(ObjectPropertyChain(:temporallyLocatedAt ObjectInverseOf(:partOf)) :presentAt)
+SubObjectPropertyOf(Annotation(rdfs:comment "K(x,y,t)∧SLC(x,s,t)∧SLC(y,r,t) → s = r") ObjectPropertyChain(ObjectInverseOf(:constantConstituentOf) :constantlySpatiallyLocatedAt) :constantlySpatiallyLocatedAt)
+SubObjectPropertyOf(ObjectPropertyChain(ObjectInverseOf(:constantPartOf) :constantPartOf) :constantlyOverlaps)
+SubObjectPropertyOf(ObjectPropertyChain(ObjectInverseOf(:constantlyOverlaps) :presentAt) :presentAt)
+SubObjectPropertyOf(ObjectPropertyChain(ObjectInverseOf(:directQualityOf) :presentAt) :presentAt)
+SubObjectPropertyOf(Annotation(rdfs:comment "D15 (half)") ObjectPropertyChain(ObjectInverseOf(:partOf) :partOf) :overlaps)
+SubObjectPropertyOf(ObjectPropertyChain(ObjectInverseOf(:partOf) :presentAt) :presentAt)
+SubObjectPropertyOf(Annotation(rdfs:comment "Approximation of Dd69") ObjectPropertyChain(ObjectInverseOf(:specificallyDependsOn) :presentAt) :presentAt)
+)

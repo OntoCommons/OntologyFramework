@@ -10,7 +10,7 @@
 <http://ontocommons.eu/meta> rdf:type owl:Ontology ;
                               owl:imports <http://emmo.info/emmo/1.0.0-beta2/middle> ,
                                           <http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl> ,
-                                          <http://www.loa-cnr.it/ontologies/DLP_397.owl> .
+                                          <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic> .
 
 #################################################################
 #    Object Properties
@@ -168,20 +168,36 @@
 <http://purl.obolibrary.org/obo/BFO_0000224> rdfs:subPropertyOf <http://ontocommons.eu/meta#7763e7a9_1848_4d35_87cb_acd2fcbe0f82> .
 
 
-###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation
-<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#constantConstituentOf
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#constantConstituentOf> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
 
 
-###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i
-<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#constantQualeOf
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#constantQualeOf> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
 
 
-###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation
-<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#constantlyOverlaps
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#constantlyOverlaps> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
 
 
-###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation-i
-<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation-i> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#constantlySpatiallyLocatedAt
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#constantlySpatiallyLocatedAt> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+
+
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#overlaps
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#overlaps> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+
+
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#presentAt
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#presentAt> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+
+
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#qualeOf
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#qualeOf> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
+
+
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#specificallyDependsOn
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#specificallyDependsOn> rdfs:subPropertyOf :b814be49_5ee7_4da2_9f7c_53990d2cd93d .
 
 
 ###  http://www.w3.org/2004/02/skos/core#broader
@@ -238,8 +254,8 @@ skos:semanticRelation rdf:type owl:ObjectProperty ;
 <http://purl.obolibrary.org/obo/BFO_0000001> rdfs:subClassOf <http://ontocommons.eu/meta#29eb2a13_30ce_4419_9828_1b61d3b265a7> .
 
 
-###  http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#particular
-<http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#particular> rdfs:subClassOf :b424c807_103d_4682_8419_465efda24e9f .
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Particular
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Particular> rdfs:subClassOf :b424c807_103d_4682_8419_465efda24e9f .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
