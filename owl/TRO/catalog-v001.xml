@@ -8,7 +8,9 @@
         <uri name="http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl" uri="./TLOs/bfo-2020.owl"/>
         <uri name="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic" uri="./TLOs/DOLCEbasic_V1beta.owl"/>
         
+        <uri name="http://ontocommons.eu/META" uri="./META/meta.owl"/>
         <uri name="http://ontocommons.eu/META/DOLCE-BFO" uri="./META/dolce-bfo.owl"/>
+        
 
     </group>
 </catalog>

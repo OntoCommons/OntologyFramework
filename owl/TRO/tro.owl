@@ -11,7 +11,7 @@
                               owl:imports <http://emmo.info/emmo/1.0.0-beta2/middle> ,
                                           <http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl> ,
                                           <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic> ,
-                                          <http://ontocommons.eu/META/DOLCE-BFO> .
+                                          <http://ontocommons.eu/META> .
 
 #################################################################
 #    Object Properties
