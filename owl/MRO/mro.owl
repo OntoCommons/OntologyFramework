@@ -8,6 +8,7 @@
 @base <http://ontocommons.eu/MRO> .
 
 <http://ontocommons.eu/MRO> rdf:type owl:Ontology ;
-                                   owl:imports <http://ontocommons.eu/TRO> .
+                                   owl:imports <http://ontocommons.eu/TRO> ,
+                                               <http://ontocommons.eu/MRO/Atom> .
 
 

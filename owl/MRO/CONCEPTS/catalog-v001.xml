@@ -12,11 +12,9 @@
         <uri name="http://ontocommons.eu/META/DOLCE-BFO" uri="../../TRO/META/dolce-bfo.owl"/>
 
         <uri name="http://ontocommons.eu/MRO" uri="../mro.owl"/>
-        <uri name="http://ontocommons.eu/MRO/Atom" uri="../CONCEPTS/mro-atom.owl"/>
 
-
-        <uri name="http://ontocommons.eu/MRO-CHEBI" uri="./mro-chebi.owl"/>
-        <uri name="http://purl.obolibrary.org/obo/chebi.owl" uri="./mro-chebi-base.owl"/>
+        <uri name="http://ontocommons.eu/MRO-CHEBI" uri="../MLOs/mro-chebi.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/chebi.owl" uri="../MLOs/chebi-base.owl"/>
 
     </group>
 </catalog>
