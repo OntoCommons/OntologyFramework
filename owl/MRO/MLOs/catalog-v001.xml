@@ -16,8 +16,6 @@
         <uri name="http://ontocommons.eu/MRO"                                           uri="../mro.owl"/>
         <uri name="http://ontocommons.eu/MRO/CONCEPTS"                                  uri="../CONCEPTS/concepts.owl"/>
 
-
-        <uri name="http://ontocommons.eu/MRO-CHEBI"                                     uri="./mro-chebi.owl"/>
         <uri name="http://purl.obolibrary.org/obo/chebi.owl"                            uri="./mro-chebi-base.owl"/>
         <uri name="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid"    uri="./BWMD_mid.owl"/>
 
