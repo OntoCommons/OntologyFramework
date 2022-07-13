@@ -1,0 +1,162 @@
+@prefix : <http://ontocommons.eu/MRO/CONCEPTS#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://ontocommons.eu/MRO/CONCEPTS> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://ontocommons.eu/MRO/CONCEPTS#e1153212_89e1_4cd0_95e4_6551920a5205
+
+:e1153212_89e1_4cd0_95e4_6551920a5205 a owl:AnnotationProperty ;
+	skos:prefLabel "elucidation"@en ;
+	rdfs:subPropertyOf skos:definition .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+
+skos:altLabel a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+
+skos:definition a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#hiddenLabel
+
+skos:hiddenLabel a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+
+skos:prefLabel a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://emmo.info/emmo#EMMO_5b2222df_4da6_442f_8244_96e9e45887d1
+
+<http://emmo.info/emmo#EMMO_5b2222df_4da6_442f_8244_96e9e45887d1> a owl:Class ;
+	owl:equivalentClass :107dfe09_8923_4bbd_8643_88936fb5ea26 .
+# 
+# http://emmo.info/emmo#EMMO_eb77076b_a104_42ac_a065_798b2d2809ad
+
+<http://emmo.info/emmo#EMMO_eb77076b_a104_42ac_a065_798b2d2809ad> a owl:Class ;
+	owl:equivalentClass <http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249> .
+# 
+# http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249
+
+<http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249> a owl:Class ;
+	rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> , <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> ;
+	:e1153212_89e1_4cd0_95e4_6551920a5205 """An atom is a nucleus surrounded by an electron cloud. The nucleus consists of electrically positive protons and electrically neutral neutrons, and carries almost all of the atom’s mass; the electron cloud is a quantum system made of one or more bounded electrons, and is pivotal in determining the atom’s size and properties. 
+It is the smallest system that has the characteristic properties of a chemical elements and, as such, it is often employed as a unit in the domain of chemistry. 
+Atoms can either be standalone or bonded; they can have an unbalanced number of electrons with respect to their atomic number (the latter being determined by the number of protons in the nucleus) or have a net electric charge."""@en ;
+	rdfs:comment """This engineered OntoCommons bridge-concept aims to provide a general, up-to-date and ambiguity-free characterisation of one of the most employed and successful notions in physics and chemistry. In this case, the lack of a shared common ground might not have immediate consequence for stakeholders, but there is a serious risk of compromising some of the most notable advantages in data exchange via ontologies, and, specifically having to do with reusability and the overall network’s predictive potential. 
+Ultimately, as a result of a survey of the related concepts appearing in MLOs, it was decided to put forward a very general Atom bridge-concept, and explicitly specify value gaps with respect to two characteristic traits: net charge and bonds. Thus, a neutral atom and a charged atom (ion) are joint into the concept Atom, and the same goes for Standalone Atoms and Bonded Atoms. 
+It should be noted that this last point solves a serious representational issue whereas atoms are considered as mereological parts of molecules, as many resources (and even golden standards such as the IUPAC, do: <https://doi.org/10.1351/goldbook.M04002>. There was in fact an effort to ensure that the proposed bridge-concept would be aligned with said golden standard, even relatively to the definition/elucidation itself. 
+The trait of “being the smallest particle still characterising a chemical element” was explicitly stated to be domain specific, for the sake of clarity: in line with that, it was decided not to include the trait “basic unit of matter”, even though it could point to a taxonomical, hierarchical, informative characteristic. Notably, the resulting definition is also not too far from the ones provided by well known and pervasively employed domain resources, such as Wikipedia, Wikidata, WordNet and the Encyclopedia Britannica. 
+The trait of being “indivisible”, appearing in Wikidata’s has been deemed obsolete and potentially confusing qua too close too the notion of Mereological Atom, which cannot be ignored due to Mereology’s pervasiveness in formal ontologies. It is factually possible to split Atoms into their subatomic components, and Encyclopedia Britannica’s definition depicts a vastly more accurate picture."""@en ;
+	rdfs:seeAlso "Encyclopedia Britannica: “smallest unit into which matter can be divided without the release of electrically charged particles. It also is the smallest unit of matter that has the characteristic properties of a chemical element”."@en , "IUPAC Goldbook: “Smallest particle still characterising a chemical element. It consists of a nucleus of a positive charge (Z is the proton number and e the elementary charge) carrying almost all its mass (more than 99.9%) and Z electrons determining its size”."@en , "WikiData: “smallest indivisible unit of a chemical substance” (Q9121)."@en , "Wikipedia: “an atom is the smallest unit of ordinary matter that forms a chemical element”; “an atom is a basic unit of matter consisting of a nucleus within a cloud of one or more electrons”."@en , "WordNet 3.1: “the smallest component of an element having the chemical properties of the element”."@en ;
+	skos:hiddenLabel "Chemical Element"@en ;
+	skos:prefLabel "Atom"@en .
+
+_:genid1 a owl:Axiom ;
+	owl:annotatedSource <http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249> ;
+	owl:annotatedProperty rdfs:subClassOf ;
+	owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000040> ;
+	rdfs:comment """Given BFO’s internal organization, there do not seem to be many options beside BFO:Material Entity for an alignment. In general, as far as BFO’s distinctions are concerned, Atoms do not seem to be vastly different from moderate-sized specimens of dry goods such as tables and bricks. 
+Arguably, the real question concerns whether the proposed OntoCommons bridge-concept, Atom, is a subclass of BFO:Object, BFO:Object Aggregate, or BFO:Fiat Object (which is arguably the rightful categorisation for a restriction of Atom via the bonded trait); however the classes are not mutually disjoint as the relevant BFO universals are not rigid, so the questions is, to a degree, meaningless. 
+In fact, the possibility of the relevant individuals of migrating among the classes seems especially appropriate in this specific scenario. There do not seem to be reasons to consider a different alignment, and the examples of usage appear to be pertinent. Despite the intuitive gap between Material Entities and Atoms, the connection seems informative and appropriate: in fact, 
+it is pivotal to be wary of intuitions which might derive from unrelated considerations pertaining to concepts’ prototypes and scale. Finally, it is worth considering whether such an alignment is conductive to an appropriate representation of electron clouds, but -it could be argued- that would be putting the cart before the horse."""@en .
+
+_:genid2 a owl:Axiom ;
+	owl:annotatedSource <http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249> ;
+	owl:annotatedProperty rdfs:subClassOf ;
+	owl:annotatedTarget <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> ;
+	rdfs:comment "The vast majority of what has been said with respect to BFO:Material Entity is relevant when it comes to DOLCE:Physical Endurant. However, the choice of a subclass, or, more specifically, of a tree of subclasses is in this case possible and informative. In DOLCE there is no distinction analogous to the one between BFO:Objects and BFO:Objects Aggregates; DOLCE:Arbitrary Sums plays a completely different role. As such, the proposed OntoCommons bridge-concept, Atom, can be seen as a subclass of DOLCE:Physical Object. Given the further distinction between Dolce’s Agentive and Non Agentive Physical Objects, based on intentionality and the possess of desires and beliefs, the choice seems straightforward, bizarre philosophical options contrary to common-sense notwithstanding. Thus, the proposed bridge-concept Atom is arguably a subclass of DOLCE:Non Agentive Physical Object; the connection seems informative and appropriate, and it is made even more plausible given the examples of usage provided in the relevant documentation."@en .
+# 
+# http://ontocommons.eu/MRO/CONCEPTS#107dfe09_8923_4bbd_8643_88936fb5ea26
+
+:107dfe09_8923_4bbd_8643_88936fb5ea26 a owl:Class ;
+	rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> , <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalEndurant> .
+
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalEndurant> a owl:Class .
+
+:107dfe09_8923_4bbd_8643_88936fb5ea26 rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Class ;
+	owl:unionOf _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first <http://purl.obolibrary.org/obo/BFO_0000027> ;
+	rdf:rest _:genid4 .
+
+_:genid4 a rdf:List ;
+	rdf:first <http://purl.obolibrary.org/obo/BFO_0000030> ;
+	rdf:rest rdf:nil .
+
+:107dfe09_8923_4bbd_8643_88936fb5ea26 skos:prefLabel "PhysicalMatter"@en .
+# 
+# http://ontocommons.eu/MRO/CONCEPTS#447f63b2_173b_45cc_a442_9e530f74ea32
+
+:447f63b2_173b_45cc_a442_9e530f74ea32 a owl:Class ;
+	rdfs:subClassOf <http://emmo.info/emmo#EMMO_5b2222df_4da6_442f_8244_96e9e45887d1> , <http://purl.obolibrary.org/obo/BFO_0000040> , <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> , _:genid6 .
+
+_:genid6 a owl:Class ;
+	owl:unionOf _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first <http://purl.obolibrary.org/obo/BFO_0000024> ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first <http://purl.obolibrary.org/obo/BFO_0000027> ;
+	rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first <http://purl.obolibrary.org/obo/BFO_0000030> ;
+	rdf:rest rdf:nil .
+
+:447f63b2_173b_45cc_a442_9e530f74ea32 :e1153212_89e1_4cd0_95e4_6551920a5205 "Any entity studied in chemistry field."@en ;
+	skos:prefLabel "ChemicalEntity"@en .
+# 
+# http://purl.obolibrary.org/obo/BFO_0000024
+
+<http://purl.obolibrary.org/obo/BFO_0000024> a owl:Class .
+# 
+# http://purl.obolibrary.org/obo/BFO_0000027
+
+<http://purl.obolibrary.org/obo/BFO_0000027> a owl:Class .
+# 
+# http://purl.obolibrary.org/obo/BFO_0000030
+
+<http://purl.obolibrary.org/obo/BFO_0000030> a owl:Class .
+# 
+# http://purl.obolibrary.org/obo/BFO_0000040
+
+<http://purl.obolibrary.org/obo/BFO_0000040> a owl:Class .
+# 
+# http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#AmountOfMatter
+
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#AmountOfMatter> a owl:Class .
+# 
+# http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject
+
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> a owl:Class .
+# 
+# http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalEndurant
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

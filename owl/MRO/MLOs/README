@@ -1,5 +1,3 @@
-chebi-base.owl
+mro-chebi-base.owl
 the first two class layers of CHEBI and all properties relations, used as an essential lightweight version of CHEBI to visualize mapping in Protege without loading the full ontology (remove the protege catalog.xml entry to load the full chebi-light from the web)
-    
-chebi-in-bfo.owl
-the official CHEBI to BFO mapping based on an obsolete version of the BFO
+
