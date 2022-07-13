@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://ontocommons.eu/MRO/iof-core-mapping" uri="MLO-Mappings/iof-core-mapping.owl"/>
+    <uri id="Imports Wizard Entry" name="http://ontocommons.eu/MRO/Product" uri="CONCEPTS/mro-product.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=false, version=2" prefer="public" xml:base="">
-
         <uri name="http://ontocommons.eu/TRO" uri="../TRO/tro.owl"/>
-        
         <uri name="http://emmo.info/emmo/1.0.0-beta2/middle" uri="../TRO/TLOs/emmo-1.0.0-beta2.owl"/>
         <uri name="http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl" uri="../TRO/TLOs/bfo-2020.owl"/>
         <uri name="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic" uri="../TRO/TLOs/DOLCEbasic_V1beta.owl"/>
-        
         <uri name="http://ontocommons.eu/META" uri="../TRO/META/meta.owl"/>
         <uri name="http://ontocommons.eu/META/DOLCE-BFO" uri="../TRO/META/dolce-bfo.owl"/>
-
         <uri name="http://ontocommons.eu/MRO" uri="./MRO/mro.owl"/>
-
         <uri name="http://ontocommons.eu/MRO/Atom" uri="./CONCEPTS/mro-atom.owl"/>
-
         <uri name="http://ontocommons.eu/MRO-CHEBI" uri="./MLOs/mro-chebi.owl"/>
         <uri name="http://purl.obolibrary.org/obo/chebi.owl" uri="./MLOs/chebi-base.owl"/>
-
     </group>
 </catalog>
