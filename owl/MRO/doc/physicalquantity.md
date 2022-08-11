@@ -138,7 +138,7 @@
 | **IRI:** | _<http://purl.obolibrary.org/obo/BFO\_0000019>_ |
 | --- | --- |
 | **OWL Type:** | _Class_ |
-| **Concept Elucidation:** | A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. [BFO] <br> <http://purl.allotrope.org/voc/bfo/REC/2018/04/bfo-2-0> <br> <http://purl.obolibrary.org/obo/bfo.owl> <br> _Examples of Usage__:_ the ambient temperature of this portion of air, the colour of a tomato, the length of the circumference of your waist, the mass of this piece of gold, the shape of your nose, the shape of your nostril. |
+| **Concept Elucidation:** | A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. [BFO] <br> <http://purl.allotrope.org/voc/bfo/REC/2018/04/bfo-2-0> <br> <http://purl.obolibrary.org/obo/bfo.owl> <br> _Examples of Usage:_ the ambient temperature of this portion of air, the colour of a tomato, the length of the circumference of your waist, the mass of this piece of gold, the shape of your nose, the shape of your nostril. |
 | **Labels:** | _Quality_ |
 
 ### Knowledge Domain Resources:
@@ -154,7 +154,7 @@
 | **IRI:** | _<https://www.materials.fraunhofer.de/ontologies/BWMD\_ontology/mid#BWMD\_00011>_ |
 | --- | --- |
 | **OWL Type:** | _Class_ |
-| **Concept Elucidation:** | _A quantity kind in analogy to the QUDT ontology described by http://www.qudt.org |
+| **Concept Elucidation:** | A quantity kind in analogy to the QUDT ontology described by http://www.qudt.org |
 | **Labels:** | _QuantityKind_ |
 
 ### Knowledge Domain Resources:
