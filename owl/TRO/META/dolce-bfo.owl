@@ -8,8 +8,8 @@
 @base <http://ontocommons.eu/META/DOLCE-BFO> .
 
 <http://ontocommons.eu/META/DOLCE-BFO> rdf:type owl:Ontology ;
-                              owl:imports <http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl> ,
-                                          <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic> .
+                                       owl:imports <http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl> ,
+                                                   <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic> .
 
 
 #################################################################

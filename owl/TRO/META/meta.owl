@@ -8,8 +8,7 @@
 @base <http://ontocommons.eu/META> .
 
 <http://ontocommons.eu/META> rdf:type owl:Ontology ;
-                              owl:imports <http://ontocommons.eu/META/DOLCE-BFO> ,
-                              <http://ontocommons.eu/TRO> .
+                              owl:imports <http://ontocommons.eu/META/DOLCE-BFO> .
 
 
 
