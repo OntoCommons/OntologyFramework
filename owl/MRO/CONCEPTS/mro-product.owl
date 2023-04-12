@@ -1,0 +1,220 @@
+@prefix : <http://ontocommons.eu/MRO#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://ontocommons.eu/MRO/Product> .
+
+<http://ontocommons.eu/MRO/Product> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ontocommons.eu/TRO#e1153212_89e1_4cd0_95e4_6551920a5205
+<http://ontocommons.eu/TRO#e1153212_89e1_4cd0_95e4_6551920a5205> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment skos:definition """(Elucidation) An atom is a nucleus surrounded by an electron cloud. The nucleus consists of electrically positive protons and electrically neutral neutrons, and carries almost all of the atom’s mass; the electron cloud is a quantum system made of one or more bounded electrons, and is pivotal in determining the atom’s size and properties. 
+
+It is the smallest system that has the characteristic properties of a chemical elements and, as such, it is often employed as a unit in the domain of chemistry. 
+
+Atoms can either be standalone or bonded; they can have an unbalanced number of electrons with respect to their atomic number (the latter being determined by the number of protons in the nucleus) or have a net electric charge."""@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://emmo.info/emmo#EMMO_1efe8b96_e006_4a33_bc9a_421406cbb9f0
+<http://emmo.info/emmo#EMMO_1efe8b96_e006_4a33_bc9a_421406cbb9f0> rdf:type owl:Class .
+
+
+###  http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3
+<http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> rdf:type owl:Class .
+
+
+###  http://ontocommons.eu/MRO#a8a6213d-438d-4a94-88b6-15398888bca9
+:a8a6213d-438d-4a94-88b6-15398888bca9 rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> ,
+                                                      <http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> ,
+                                                      <http://purl.obolibrary.org/obo/BFO_0000040> ,
+                                                      <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalObject> ;
+                                      rdfs:isDefinedBy """A Good is something which is explicitly offered on the market for purchase or barter, whose ownership is transferred to the purchaser as a condition for the completion of the transaction, and which is associated with a specific material entity which doesn’t merely act as a legal placeholder or as a contingent medium to the end of completing a transaction.
+
+Goods are the outcome of some kind of practical activity which needn’t have been performed, directly, or indirectly, by the organization or individual offering the Good on the market, and which needn’t involve a transformation of the item which is then offered for purchase. It should be noted that an intellectual activity might be prodromic to the performance of a practical activity whose result is a Good.
+
+Goods can either belong to the purchaser for an indefinite, or predetermined, period of time after the completion of a transaction; the ownership can be transferred at any point during the transaction and needn’t grant full legal rights over the owned article. They are generally considered to be tangible and conceptualised as reducible, or identical to specific material entities, though said characteristics do not pertain to the domain of economics, and are at most derivative. 
+
+Goods can indifferently be artefacts or not artefacts. Likewise, they can indifferently be raw materials or processed materials."""@en ;
+                                      skos:prefLabel "Goods" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> ;
+   rdfs:comment "In EMMO, the holistic perspective represents entities according to their relations to the whole. Given EMMO’s framework and background assumptions, it seems appropriate to look for a connection with the proposed OntoCommons bridge-concept, Commercial Product, in this branch. EMMO:Role, or one of its subclasses, seems to be an appropriate candidate for a meaningful connection, though it should be noted that the same entity could be represented differently under different guises (and not as something that is being explicitly offered on the market for purchase or barter). For instance, it might be worth considering some goods under the reductionistic or physicalistic perspective, or -within the boundaries of the holistic perspective- investigating the establishment of a connection with EMMO:Whole. It should be noted that the treatment is consistent with that for other scenarios involving posited entities connected with the OntoCommons concepts belonging to the concept cluster: Commercial Product."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000040> ;
+   rdfs:comment "Given BFO’s internal organisation, the most pertinent option for an alignment seems to be BFO:Material Entity. Arguably, the relevant scenarios would be represented in BFO as involving a BFO:Material Entity in which inheres (BFO) a certain BFO:Role, possibly with further specifications about the transaction process and its participants. BFO’s documentation is perfectly in line with some of the traits characterising the proposed OntoCommons bridge-concept, Good (Commercial), and the alignment is reinforced by the treatment of supposedly similar concepts in MLOs based on BFO. It might be suggested that a more informative alignment could be established with subclasses of BFO:Material Entity (i.e. BFO:Object, BFO:Object Aggregate, or BFO:Fiat Object); however the classes are not mutually disjoint, as the relevant BFO universals are not rigid. Everything considered, there are good prima facie good reasons to believe that the link between the proposed OntoCommons bridge-concept and  BFO:Material Entity is one of rdfs:subClassOf, as the specifications considered act as constraints on BFO:Material Entity."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalObject> ;
+   rdfs:comment "Taking into account DOLCE’s background philosophical assumptions and internal organisation, DOLCE: Physical Object seems to be the best candidate for a connection, with no real alternatives, if not among its subclasses. The connection is quite straightforward and supported by the relevant documentation. It might appear prima facie plausible to connect the proposed OntoCommons bridge-concept, Good (Commercial) directly to DOLCE:Non-Agentive Physical Object, in order to establish a more informative connection, however nothing in the proposed definition bars goods from having intentions, beliefs and desires (consider for instance pets and livestock); so that link would be too restrictive, and ultimately mistaken."@en
+ ] .
+
+
+###  http://ontocommons.eu/MRO#eddb062f-bbbf-4081-a673-64fd7b163918
+:eddb062f-bbbf-4081-a673-64fd7b163918 rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://ontocommons.eu/MRO/Product#4eb83551-92f3-4506-b5f8-8546a35b62b9> ,
+                                                      <http://purl.obolibrary.org/obo/BFO_0000015> ,
+                                                      <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Stative> ,
+                                                      [ rdf:type owl:Class ;
+                                                        owl:unionOf ( <http://emmo.info/emmo#EMMO_1efe8b96_e006_4a33_bc9a_421406cbb9f0>
+                                                                      <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3>
+                                                                    )
+                                                      ] ;
+                                      rdfs:isDefinedBy """A Service is something which is explicitly offered on the market for purchase or barter, and whose ownership is not transferred to the purchaser as a condition for the completion of the transaction. It should be noted that the relevant transaction can involve the transference of legal rights (ownership included), as long as the latter are not constitutive of the service. 
+
+Services consist in the access to some benefits, which might involve the performance of some kind of practical and/or intellectual activity. The benefits have to be made directly, or indirectly, available by the organization or individual offering the Service on the market, i.e. the provider.
+
+The access to the relevant benefits can be temporary (be the duration predetermined or not) or permanent; access to the benefit can be given, and revoked, at any point during the transaction. Services are generally considered to be intangible and conceptualised as reified activities, though said characteristics do not pertain to the domain of economics, and are at most derivative."""@en ;
+                                      skos:prefLabel "Commercial Service" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000015> ;
+   rdfs:comment "BFO’s taxonomy is hinged on the distinction between Occurrents and Continuants; the ontology is also strongly opposed to reification and allows only “spatial” entities under BFO:Immaterial Entity, on the side of Continuants. Together, these two points hint at the fact that BFO:Occurrent, or one of its subclasses, should be the most suited candidate for the establishment of an informative connection. In fact, while the core trait concerning ownership-transference is arguably neutral with respect to the ontological categorisation, there are good reasons to think that services, characterised as accesses to benefits, have to occur over time, and should be understood specifically as processes (BFO:Process’s elucidation being in line with the common understanding of the notion). While presumably highly heterogeneous, services should all share some commonalities (e.g. involve independent continuants with certain deontological roles: costumer, provider); that being the case it seems appropriate to assume that the proposed OntoCommons bridge-concept, Service (Commercial) should be linked with BFO:Process by means of the rdfs:subClassOf relation. The alignment is reinforced by the treatment of supposedly similar concepts in MLOs based on BFO (some of which considered infra in this template) and the lack of real alternatives. Ultimately, the resulting link is also straightforward and usable."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Stative> ;
+   rdfs:comment "The distinction between Endurants and Perdurants in DOLCE is almost as important as that between Occurrents and Continuants in BFO. It is thus prima facie reasonable to begin looking for a connections starting from the subclasses of DOLCE:Perdurant, on the basis of the similarities between DOLCE:Perdurant and BFO:Occurrent. In fact, the sub-class of DOLCE:Perdurant, DOLCE:Process, seems analogous to BFO:Process under many respects, ontological significance first and foremost. Then again, the most informative candidate for a connection under the Perdurants-branch seems its super class: DOLCE:Stative, as some of the relevant cases might arguably be characterised as States given the core homeomericity trait. Still, DOLCE is not opposed to reifications, and it thus worth considering alternatives such as DOLCE:Non-Agentive Social Object for the connection. However, it is far from clear whether the resulting conceptualisation would be satisfactory in all -or even in most- cases which fall under the proposed OntoCommons bridge-concept, Service (Commercial), so the first option considered seems ultimately more informative/appropriate. The proposed semantic relation is that of rdfs:subClassOf, with some Agentive Social Objects necessarily being involved in (participating in) the Stative, acting as further constraints."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Class ;
+                         owl:unionOf ( <http://emmo.info/emmo#EMMO_1efe8b96_e006_4a33_bc9a_421406cbb9f0>
+                                       <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3>
+                                     )
+                       ] ;
+   rdfs:comment "In EMMO, the holistic perspective represents entities according to their relations to the whole. Given EMMO’s framework and background assumptions, it seems appropriate to look for a connection with the proposed OntoCommons bridge-concept, Commercial Product, in this branch. Both EMMO:Role and EMMO:Whole, or one of their subclasses, seems to be appropriate candidates for a meaningful connection, depending on how the service is conceptualised. Again, it should be noted that the same entity could be represented differently under different guises. Given certain representational ends, there are thus reasons to consider connections with other perspectives, e.g. with EMMO:Process under the Persistence perspective. It should be noted that the treatment is consistent with that for other scenarios involving posited entities connected with the OntoCommons concepts belonging to the concept cluster: Commercial Product."@en
+ ] .
+
+
+###  http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249
+<http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
+                                                                                 <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> ;
+                                                                 <http://ontocommons.eu/TRO#e1153212_89e1_4cd0_95e4_6551920a5205> """An atom is a nucleus surrounded by an electron cloud. The nucleus consists of electrically positive protons and electrically neutral neutrons, and carries almost all of the atom’s mass; the electron cloud is a quantum system made of one or more bounded electrons, and is pivotal in determining the atom’s size and properties. 
+It is the smallest system that has the characteristic properties of a chemical elements and, as such, it is often employed as a unit in the domain of chemistry. 
+Atoms can either be standalone or bonded; they can have an unbalanced number of electrons with respect to their atomic number (the latter being determined by the number of protons in the nucleus) or have a net electric charge."""@en ;
+                                                                 rdfs:seeAlso "Encyclopedia Britannica: “smallest unit into which matter can be divided without the release of electrically charged particles. It also is the smallest unit of matter that has the characteristic properties of a chemical element”."@en ,
+                                                                              "IUPAC Goldbook: “Smallest particle still characterising a chemical element. It consists of a nucleus of a positive charge (Z is the proton number and e the elementary charge) carrying almost all its mass (more than 99.9%) and Z electrons determining its size”."@en ,
+                                                                              "WikiData: “smallest indivisible unit of a chemical substance” (Q9121)."@en ,
+                                                                              "Wikipedia: “an atom is the smallest unit of ordinary matter that forms a chemical element”; “an atom is a basic unit of matter consisting of a nucleus within a cloud of one or more electrons”."@en ,
+                                                                              "WordNet 3.1: “the smallest component of an element having the chemical properties of the element”."@en ;
+                                                                 skos:definition """This engineered OntoCommons bridge-concept aims to provide a general, up-to-date and ambiguity-free characterisation of one of the most employed and successful notions in physics and chemistry. In this case, the lack of a shared common ground might not have immediate consequence for stakeholders, but there is a serious risk of compromising some of the most notable advantages in data exchange via ontologies, and, specifically having to do with reusability and the overall network’s predictive potential. 
+Ultimately, as a result of a survey of the related concepts appearing in MLOs, it was decided to put forward a very general Atom bridge-concept, and explicitly specify value gaps with respect to two characteristic traits: net charge and bonds. Thus, a neutral atom and a charged atom (ion) are joint into the concept Atom, and the same goes for Standalone Atoms and Bonded Atoms. 
+It should be noted that this last point solves a serious representational issue whereas atoms are considered as mereological parts of molecules, as many resources (and even golden standards such as the IUPAC, do: <https://doi.org/10.1351/goldbook.M04002>. There was in fact an effort to ensure that the proposed bridge-concept would be aligned with said golden standard, even relatively to the definition/elucidation itself. 
+The trait of “being the smallest particle still characterising a chemical element” was explicitly stated to be domain specific, for the sake of clarity: in line with that, it was decided not to include the trait “basic unit of matter”, even though it could point to a taxonomical, hierarchical, informative characteristic. Notably, the resulting definition is also not too far from the ones provided by well known and pervasively employed domain resources, such as Wikipedia, Wikidata, WordNet and the Encyclopedia Britannica. 
+The trait of being “indivisible”, appearing in Wikidata’s has been deemed obsolete and potentially confusing qua too close too the notion of Mereological Atom, which cannot be ignored due to Mereology’s pervasiveness in formal ontologies. It is factually possible to split Atoms into their subatomic components, and Encyclopedia Britannica’s definition depicts a vastly more accurate picture."""@en ;
+                                                                 skos:hiddenLabel "Chemical Element"@en ;
+                                                                 skos:prefLabel "Atom"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249> ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000040> ;
+   rdfs:comment """Given BFO’s internal organization, there do not seem to be many options beside BFO:Material Entity for an alignment. In general, as far as BFO’s distinctions are concerned, Atoms do not seem to be vastly different from moderate-sized specimens of dry goods such as tables and bricks. 
+Arguably, the real question concerns whether the proposed OntoCommons bridge-concept, Atom, is a subclass of BFO:Object, BFO:Object Aggregate, or BFO:Fiat Object (which is arguably the rightful categorisation for a restriction of Atom via the bonded trait); however the classes are not mutually disjoint as the relevant BFO universals are not rigid, so the questions is, to a degree, meaningless. 
+In fact, the possibility of the relevant individuals of migrating among the classes seems especially appropriate in this specific scenario. There do not seem to be reasons to consider a different alignment, and the examples of usage appear to be pertinent. Despite the intuitive gap between Material Entities and Atoms, the connection seems informative and appropriate: in fact, 
+it is pivotal to be wary of intuitions which might derive from unrelated considerations pertaining to concepts’ prototypes and scale. Finally, it is worth considering whether such an alignment is conductive to an appropriate representation of electron clouds, but -it could be argued- that would be putting the cart before the horse."""@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249> ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> ;
+   rdfs:comment "The vast majority of what has been said with respect to BFO:Material Entity is relevant when it comes to DOLCE:Physical Endurant. However, the choice of a subclass, or, more specifically, of a tree of subclasses is in this case possible and informative. In DOLCE there is no distinction analogous to the one between BFO:Objects and BFO:Objects Aggregates; DOLCE:Arbitrary Sums plays a completely different role. As such, the proposed OntoCommons bridge-concept, Atom, can be seen as a subclass of DOLCE:Physical Object. Given the further distinction between Dolce’s Agentive and Non Agentive Physical Objects, based on intentionality and the possess of desires and beliefs, the choice seems straightforward, bizarre philosophical options contrary to common-sense notwithstanding. Thus, the proposed bridge-concept Atom is arguably a subclass of DOLCE:Non Agentive Physical Object; the connection seems informative and appropriate, and it is made even more plausible given the examples of usage provided in the relevant documentation."@en
+ ] .
+
+
+###  http://ontocommons.eu/MRO/Product#2d656c8b-1710-4957-8764-9502686893f6
+<http://ontocommons.eu/MRO/Product#2d656c8b-1710-4957-8764-9502686893f6> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> ;
+                                                                         skos:prefLabel "Intellectual Article" .
+
+
+###  http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64
+<http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> rdf:type owl:Class ;
+                                                                         owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                               owl:unionOf ( :a8a6213d-438d-4a94-88b6-15398888bca9
+                                                                                                             <http://ontocommons.eu/MRO/Product#2d656c8b-1710-4957-8764-9502686893f6>
+                                                                                                           )
+                                                                                             ] ;
+                                                                         rdfs:subClassOf <http://ontocommons.eu/MRO/Product#4eb83551-92f3-4506-b5f8-8546a35b62b9> ;
+                                                                         skos:prefLabel "Commercial Article" .
+
+
+###  http://ontocommons.eu/MRO/Product#4eb83551-92f3-4506-b5f8-8546a35b62b9
+<http://ontocommons.eu/MRO/Product#4eb83551-92f3-4506-b5f8-8546a35b62b9> rdf:type owl:Class ;
+                                                                         owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                               owl:unionOf ( :eddb062f-bbbf-4081-a673-64fd7b163918
+                                                                                                             <http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64>
+                                                                                                           )
+                                                                                             ] ;
+                                                                         rdfs:comment """A Commercial Product is something which is explicitly offered on the market for purchase or barter. Commercial Products can consist in the outcome of some kind of practical and/or intellectual activity, or in the access to some benefits. 
+In the first scenario, the activity needn’t necessarily have been performed, directly, or indirectly, by the organization or individual offering the Commercial Product on the market, and the activity itself needn’t involve a transformation of the item which is then offered for purchase. In the second case, the benefit has to be made directly, or indirectly, available by the organization or individual offering the Commercial Product on the market, and the access to the relevant benefit can be temporary (be the duration predetermined or not) or permanent.
+Commercial Products can either belong to the purchaser for an indefinite period of time after the completion of a transaction, or the transference of their ownership might not figure as a condition for the completion of the transaction. They can indifferently be either tangible or intangible, artefacts or not artefacts. Likewise, they can indifferently be e.g., raw materials, processed materials, goods, intellectual properties, services.""" ;
+                                                                         skos:prefLabel "Commercial Product" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+<http://purl.obolibrary.org/obo/BFO_0000015> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+<http://purl.obolibrary.org/obo/BFO_0000040> rdf:type owl:Class .
+
+
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> rdf:type owl:Class .
+
+
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalObject
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalObject> rdf:type owl:Class .
+
+
+###  http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Stative
+<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Stative> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

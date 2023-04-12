@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.purl.ontocommons.edu/tro/common-annotation#"
+     xml:base="http://www.purl.ontocommons.edu/tro/common-annotation"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:iof-av="https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+     xmlns:common-annotation="http://www.purl.ontocommons.edu/tro/common-annotation#">
+    <owl:Ontology rdf:about="http://www.purl.ontocommons.edu/tro/common-annotation">
+        <owl:versionIRI rdf:resource="http://www.purl.ontocommons.edu/tro/common-annotation/0.0.1"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.ontocommons.edu/tro/common-annotation#URI -->
+
+    <owl:AnnotationProperty rdf:about="http://www.purl.ontocommons.edu/tro/common-annotation#URI">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">
+        <rdfs:label xml:lang="en">is defined by</rdfs:label>
+        <skos:definition xml:lang="en">A resource that orginally defines the given resource.</skos:definition>
+        <iof-av:usageNote xml:lang="en">This annotation property may be used to indicate the source from which the given resource is curated..</iof-av:usageNote>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#closeMatch</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has close match</rdfs:label>
+        <skos:definition xml:lang="en">An annotation property which is sufficiently similar and can be used interchangeably.</skos:definition>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#definition</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <skos:definition xml:lang="en">statement or formal explanation of the meaning of a concept</skos:definition>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example">
+        <rdfs:comment xml:lang="en">Should this annotation property be restricted to only annotation property or class/object property?</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core#example</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">example</rdfs:label>
+        <skos:definition xml:lang="en">An example or instance of the use of the given resource.</skos:definition>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote -->
+
+    <owl:AnnotationProperty rdf:about="https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote">
+        <rdfs:isDefinedBy>https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/usageNote</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">usage note</rdfs:label>
+        <skos:definition xml:lang="en">note that provides information about how a given notion or resource is used in the ontology&apos;s context</skos:definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.ontocommons.edu/tro/common-annotation#dtype1 -->
+
+    <rdfs:Datatype rdf:about="http://www.purl.ontocommons.edu/tro/common-annotation#dtype1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.ontocommons.edu/tro/common-annotation#OProperty1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.ontocommons.edu/tro/common-annotation#OProperty1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.ontocommons.edu/tro/common-annotation#DProperty1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.purl.ontocommons.edu/tro/common-annotation#DProperty1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.ontocommons.edu/tro/common-annotation#ClassA -->
+
+    <owl:Class rdf:about="http://www.purl.ontocommons.edu/tro/common-annotation#ClassA">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.purl.ontocommons.edu/tro/common-annotation#OProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <URI rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</URI>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.purl.ontocommons.edu/tro/common-annotation#ClassA"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.purl.ontocommons.edu/tro/common-annotation#OProperty1"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>this is an axiom</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.purl.ontocommons.edu/tro/common-annotation#ind1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.ontocommons.edu/tro/common-annotation#ind1"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
