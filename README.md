@@ -3,11 +3,14 @@ The main repository for [OntoCommons](https://ontocommons.eu) Top Reference Onto
 
 ## Contributing Partners
 Department of Industrial Enginering (DIN), University of Bologna, Italy
+
 CNR-ISTC Laboratory for Applied Ontology (LOA), Trento, Italy
+
 National School of Engineers of Tarbes (ENIT), Tarbes, France
 
 ## Contacts:
 Emanuele Ghedini, University of Bologna
+
 emanuele.ghedini@unibo.it
 
 ### Acknowledgement
