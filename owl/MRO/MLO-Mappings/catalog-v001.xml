@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/ontology/202301/core/Core/" uri="https://spec.industrialontologies.org/iof/ontology/core/Core/"/>
     <uri id="Imports Wizard Entry" name="https://purl.industrialontologies.org/ontology/core/20220506/Core/" uri="https://purl.industrialontologies.org/ontology/core/Core/"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1657699137801" name="https://ontocommons.eu/MRO/iof-core-mapping" uri="iof-core-mapping.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1683545628889" name="https://ontocommons.eu/MRO/iof-core-mapping" uri="iof-core-mapping.owl"/>
     </group>
 </catalog>
