@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl" uri="file:/C:/Users/arkop/git/Ontocommons-MLO/OntologyFramework/owl/TRO/TLOs/bfo-2020.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=false, version=2" prefer="public" xml:base="">
         <uri name="http://ontocommons.eu/TRO" uri="../tro.owl"/>
         <uri name="http://emmo.info/emmo/1.0.0-beta2/middle" uri="../TLOs/emmo-1.0.0-beta2.owl"/>
