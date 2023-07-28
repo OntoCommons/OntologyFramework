@@ -8,7 +8,7 @@
 @base <http://ontocommons.eu/TLO> .
 
 <http://ontocommons.eu/TLO> rdf:type owl:Ontology ;
-                             owl:imports <http://emmo.info/emmo/1.0.0-beta2/middle> ,
+                             owl:imports <http://emmo.info/emmo/1.0.0-beta5/emmo-tlo> ,
                                          <http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl> ,
                                          <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic> .
 

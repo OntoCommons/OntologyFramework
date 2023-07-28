@@ -1,0 +1,21 @@
+@prefix : <http://ontocommons.eu/META/DOLCE-EMMO-RL#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix dolce: <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@base <http://ontocommons.eu/META/DOLCE-EMMO-RL#> .
+
+<http://ontocommons.eu/META/DOLCE-EMMO-RL> rdf:type owl:Ontology ;
+                                           owl:imports <http://emmo.info/emmo/1.0.0-beta5/emmo-tlo> ,
+                                                       <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic> .
+
+
+

@@ -2,7 +2,7 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=false, version=2" prefer="public" xml:base="">
 
-        <uri name="http://emmo.info/emmo/1.0.0-beta2/middle" uri="./emmo-1.0.0-beta2.owl"/>
+        <uri name="http://emmo.info/emmo/1.0.0-beta5/emmo-tlo" uri="./emmo-tlo.owl"/>
         <uri name="http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl" uri="./bfo-2020.owl"/>
         <uri name="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic" uri="./DOLCEbasic_V1beta.owl"/>
         
