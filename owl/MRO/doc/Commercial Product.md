@@ -6,8 +6,15 @@
 | **IRI:** | _Suggested entity new IRI._ |
 | --- | --- |
 | **OWL Type:** | Class |
-| **Concept Elucidation:** | An atom is a nucleus surrounded by an electron cloud. The nucleus consists of electrically positive protons and electrically neutral neutrons, and carries almost all of the atom’s mass; the electron cloud is a quantum system made of one or more bounded electrons, and is pivotal in determining the atom’s size and properties. It is the smallest system that has the characteristic properties of a chemical elements and, as such, it is often employed as a unit in the domain of chemistry. Atoms can either be standalone or bonded; they can have an unbalanced number of electrons with respect to their atomic number (the latter being determined by the number of protons in the nucleus) or have a net electric charge. <br><br> Domain: Natural sciences - Physics / Chemistry.|
-| **Labels:** | skos:prefLabel: Atom <br><br> skos:altLabel: Atom (Broad) <br><br> skos:hiddenLabel: Chemical Element, Neutral-or-Ion Atom, Standalone-or-Bonded Atom |
+| **Concept Elucidation:** | A Commercial Product is something which is explicitly offered on the market for purchase or barter. Commercial Products can consist in the outcome of some kind of practical and/or intellectual activity, or in the access to some benefits. 
+In the first scenario, the activity needn’t necessarily have been performed, directly, or indirectly, by the organization or individual offering the Commercial Product on the market, and the activity itself needn’t involve a transformation of the item which is then offered for purchase. In the second case, the benefit has to be made directly, or indirectly, available by the organization or individual offering the Commercial Product on the market, and the access to the relevant benefit can be temporary (be the duration predetermined or not) or permanent.
+Commercial Products can either belong to the purchaser for an indefinite period of time after the completion of a transaction, or the transference of their ownership might not figure as a condition for the completion of the transaction. They can indifferently be either tangible or intangible, artefacts or not artefacts. Likewise, they can indifferently be e.g., raw materials, processed materials, goods, intellectual properties, and services.
+Domain: Economics - Business – Marketing|
+| **Labels:** | Labels used to address the concept, ordered as: 
+skos:prefLabel: Commercial Product
+skos:altLabel: Product; Product (Economic)
+skos:hiddenLabel: Good; Service; Article; Purchasable; Transactable Entity; Merchandise; Commodity; Ware
+ |
 
 ### Knowledge Domain Resources:
 
