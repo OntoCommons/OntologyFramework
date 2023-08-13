@@ -6,14 +6,8 @@
 | **IRI:** | _Suggested entity new IRI._ |
 | --- | --- |
 | **OWL Type:** | Class |
-| **Concept Elucidation:** | A Commercial Product is something which is explicitly offered on the market for purchase or barter. Commercial Products can consist in the outcome of some kind of practical and/or intellectual activity, or in the access to some benefits. 
-In the first scenario, the activity needn’t necessarily have been performed, directly, or indirectly, by the organization or individual offering the Commercial Product on the market, and the activity itself needn’t involve a transformation of the item which is then offered for purchase. In the second case, the benefit has to be made directly, or indirectly, available by the organization or individual offering the Commercial Product on the market, and the access to the relevant benefit can be temporary (be the duration predetermined or not) or permanent.
-Commercial Products can either belong to the purchaser for an indefinite period of time after the completion of a transaction, or the transference of their ownership might not figure as a condition for the completion of the transaction. They can indifferently be either tangible or intangible, artefacts or not artefacts. Likewise, they can indifferently be e.g., raw materials, processed materials, goods, intellectual properties, and services.
-Domain: Economics - Business – Marketing|
-| **Labels:** | Labels used to address the concept, ordered as: 
-skos:prefLabel: Commercial Product
-skos:altLabel: Product; Product (Economic)
-skos:hiddenLabel: Good; Service; Article; Purchasable; Transactable Entity; Merchandise; Commodity; Ware
+| **Concept Elucidation:** | A Commercial Product is something which is explicitly offered on the market for purchase or barter. Commercial Products can consist in the outcome of some kind of practical and/or intellectual activity, or in the access to some benefits. <br><br> In the first scenario, the activity needn’t necessarily have been performed, directly, or indirectly, by the organization or individual offering the Commercial Product on the market, and the activity itself needn’t involve a transformation of the item which is then offered for purchase. In the second case, the benefit has to be made directly, or indirectly, available by the organization or individual offering the Commercial Product on the market, and the access to the relevant benefit can be temporary (be the duration predetermined or not) or permanent. <br><br> Commercial Products can either belong to the purchaser for an indefinite period of time after the completion of a transaction, or the transference of their ownership might not figure as a condition for the completion of the transaction. They can indifferently be either tangible or intangible, artefacts or not artefacts. Likewise, they can indifferently be e.g., raw materials, processed materials, goods, intellectual properties, and services. <br><br> Domain: Economics - Business – Marketing|
+| **Labels:** | Labels used to address the concept, ordered as: <br><br> skos:prefLabel: Commercial Product <br><br> skos:altLabel: Product; Product (Economic) <br><br> skos:hiddenLabel: Good; Service; Article; Purchasable; Transactable Entity; Merchandise; Commodity; Ware
  |
 
 ### Knowledge Domain Resources:
