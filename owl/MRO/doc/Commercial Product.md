@@ -27,124 +27,23 @@
 |     |     |
 | --- | --- |
 | **Target Ontology:** | BFO: <http://purl.obolibrary.org/obo/bfo.owl> |
-| **Related Ontology Entities:** | Material Entity: <http://purl.obolibrary.org/obo/BFO_0000040> |
-| **Mapping Elucidation:** | Given BFO’s internal organization, there do not seem to be many options beside BFO:Material Entity for an alignment. In general, as far as BFO’s distinctions are concerned, Atoms do not seem to be vastly different from moderate-sized specimens of dry goods such as tables and bricks. Arguably, the real question concerns whether the proposed OntoCommons bridge-concept, Atom, is a subclass of BFO:Object, BFO:Object Aggregate, or BFO:Fiat Object (which is arguably the rightful categorisation for a restriction of Atom via the bonded trait); however the classes are not mutually disjoint as the relevant BFO universals are not rigid, so the questions is, to a degree, meaningless. In fact, the possibility of the relevant individuals of migrating among the classes seems especially appropriate in this specific scenario. There do not seem to be reasons to consider a different alignment, and the examples of usage appear to be pertinent. Despite the intuitive gap between Material Entities and Atoms, the connection seems informative and appropriate: in fact, it is pivotal to be wary of intuitions which might derive from unrelated considerations pertaining to concepts’ prototypes and scale. Finally, it is worth considering whether such an alignment is conductive to an appropriate representation of electron clouds, but -it could be argued- that would be putting the cart before the horse. |
-| **Semantic Relation Level:** | rdfs:subClassOf |
+| **Related Ontology Entities:** |Alignment mediated by other bridge-concepts belonging to the Concept Cluster: Commercial Product |
+| **Mapping Elucidation:** | BFO is arguably organised in a way that makes the broad concept of product here considered -practically, if not necessarily- trans-categorical. Specifically, BFO arguably lacks a unified and straightforward representation of scenarios involving things up for purchase. In order to circumvent this problem, the alignment has thus to be mediated by other, non-trans-categorical (modulo-BFO) concepts. The alignment is made all the more challenging by the fact that economic/legal concepts are hard to pin down in a neutral and universally valid fashion, and the resulting alignments still cannot be all 1:1 due to the explicit expressive power of the relevant TLO, by means of single classes. Nonetheless, it is arguably possible to put forward a direct link for Goods (Commercial), and (more problematically) for Service (Commercial), and outline necessary conditions for Intellectual Article (Commercial), recomposing Commercial Product’s logical space. The specific links are investigated in the pertinent templates, while the semantic links defining the cluster are examined in the relevant section below. |
+| **Semantic Relation Level:** | Mediated Semantic Connection |
 | **Mapping Axioms:** | TBD |
 
 |     |     |
 | --- | --- |
 | **Target Ontology:** | DOLCE: <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic> |
-| **Related Ontology Entities:** | NonAgentivePhysicalObject: <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> |
-| **Mapping Elucidation:** | The vast majority of what has been said with respect to BFO:Material Entity is relevant when it comes to DOLCE:Physical Endurant. However, the choice of a subclass, or, more specifically, of a tree of subclasses is in this case possible and informative. In DOLCE there is no distinction analogous to the one between BFO:Objects and BFO:Objects Aggregates; DOLCE:Arbitrary Sums plays a completely different role. As such, the proposed OntoCommons bridge-concept, Atom, can be seen as a subclass of DOLCE:Physical Object. Given the further distinction between Dolce’s Agentive and Non Agentive Physical Objects, based on intentionality and the possess of desires and beliefs, the choice seems straightforward, bizarre philosophical options contrary to common-sense notwithstanding. Thus, the proposed bridge-concept Atom is arguably a subclass of DOLCE:Non Agentive Physical Object; the connection seems informative and appropriate, and it is made even more plausible given the examples of usage provided in the relevant documentation. |
-| **Semantic Relation Level:** | rdfs:subClassOf |
+| **Related Ontology Entities:** | Alignment mediated by other bridge-concepts belonging to the Concept Cluster: Commercial Product |
+| **Mapping Elucidation:** | Much of what has been said with respect to BFO holds, mutatis mutandis, for DOLCE, though the latter has a high tolerance for reifications (being grounded in common sense), resulting in an increased explicit expressive power. Due to that, it’s possible to establish (comparatively) more straightforward 1:1 connections via the other bridge-concepts belonging to the OntoCommons concept cluster: Commercial Product, specifically in the case of Intellectual Articles (Commercial). The specific links are investigated in the pertinent templates, while the semantic links defining the cluster are examined in the relevant section below. |
+| **Semantic Relation Level:** | Mediated Semantic Connection |
 | **Mapping Axioms:** | TBD |
 
 |     |     |
 | --- | --- |
 | **Target Ontology:** | EMMO: <http://emmo.info/emmo> |
-| **Related Ontology Entities:** |Atom: <http://emmo.info/emmo#EMMO_eb77076b_a104_42ac_a065_798b2d2809ad> |
-| **Mapping Elucidation:** | EMMO:Atom appears to be the perfect candidate for an alignment based on class equivalence with the proposed OntoCommons bridge-concept, Atom. The tentative connection is supported by the relevant documentation, which makes explicit relevant value gaps by means of subclasses. There do not seem to be reasons to consider other alignments, and, in this case, even the problems involving the eventual in-framework representation of electron clouds can be dismissed. |
-| **Semantic Relation Level:** | rdfs:equivalentClass |
+| **Related Ontology Entities:** |Role: <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> |
+| **Mapping Elucidation:** | In EMMO, the holistic perspective represents entities according to their relations to the whole. Given EMMO’s framework and background assumptions, it seems appropriate to look for a connection with the proposed OntoCommons bridge-concept, Commercial Product, in this branch. EMMO:Role, or one of its subclasses, seems to be an appropriate candidate for a meaningful connection, though it should be noted that the same entity could be represented differently under different guises (and not as something that is being explicitly offered on the market for purchase or barter). |
+| **Semantic Relation Level:** | rdfs:subClassOf |
 | **Mapping Axioms:** | TBD |
-
-|     |     |
-| --- | --- |
-| **Target Ontology:** | BWMD-mid: <https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid> |
-| **Related Ontology Entities:** |Atom: <https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00131> |
-| **Mapping Elucidation:** | The prima facie obvious candidate for a connection is BWMD:Atom. The alignment is based on the assumption that the relevant Wikipedia page (in German), and specifically the version which was consulted by BWMD’s developers, is consistent with its English analogue as of 24/04/22, given what has been said above in the comment to the elucidation of the OntoCommons bridge-concept, Atom. In support of this alignment, it should also be noted that BWMD is based on BFO, and BWMD:Atom is a subclass of BWMD/BFO:Object and of BWMD/BFO:Material Entity, consistently with the relative proposed alignment. Moreover, there do not seem to be other candidates worth considering, nor evidence against a semantic relationship of class equivalence. However there could, and should, be doubts concerning how literally “any kind of atom as described by https://de.wikipedia.org/wiki/Atom” should be interpreted. Due to the lack of alternatives, common-sense was chosen as a guide. |
-| **Semantic Relation Level:** | rdfs:equivalentClass |
-| **Mapping Axioms:** | TBD |
-
-|     |     |
-| --- | --- |
-| **Target Ontology:** | EMMO-MECH-TEST: <http://emmo.info/emmo/domain/mechanical-testing> |
-| **Related Ontology Entities:** |Atom: <http://emmo.info/emmo/middle/materials#EMMO_eb77076b_a104_42ac_a065_798b2d2809ad> |
-| **Mapping Elucidation:** | The Domain Mechanical Testing ontology EMMO-MECH-TEST is based on EMMO; as such what has been said above can be applied mutatis mutandis in this case. Given the proposed semantic link, the absence of better candidates should come as no surprise. However, it should be noted that EMMO-MECH-TEST is based on an outdated version of EMMO. Nonetheless, there are no significant differences compromising the alignment, or modifying the semantic relationship between the proposed OntoCommons bridge-concept, Atom, and EMMO-MECH-TEST’s Atom. |
-| **Semantic Relation Level:** | rdfs:equivalentClass |
-| **Mapping Axioms:** | TBD |
-
-## EXISTENT CONCEPT: MATERIAL ENTITY (BFO)
-
-### General Concept Info:
-
-| **IRI:** |<http://purl.obolibrary.org/obo/BFO_0000040> |
-| --- | --- |
-| **OWL Type:** | Class |
-| **Concept Elucidation:** | A material entity is an independent continuant that at all times at which it exists has some portion of matter as continuant part. <br><br> Examples of Usage: a human being, the undetached arm of a human being, an aggregate of human beings. |
-| **Labels:** | Material Entity |
-
-### Knowledge Domain Resources:
-
-|     |     |
-| --- | --- |
-| **Related Domain Resources:** | Building Ontologies with BFO: “material entity is an independent continuant that has some portion of matter as part. It is thus an independent continuant that is spatially extended in three dimensions, and that continues to exist through some interval of time, however short”. |
-| **Comments:** |  |
-
-## EXISTENT CONCEPT: NON AGENTIVE PHYSICAL OBJECT (DOLCE)
-
-### General Concept Info:
-
-| **IRI:** |<http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#NonAgentivePhysicalObject> |
-| --- | --- |
-| **OWL Type:** | Class |
-| **Concept Elucidation:** | A Non-Agentive Physical Object is a physical object to which intentions, believes and desires are not ascribed. <br><br> Examples of Usage: a pebble, a house, a computer, a human body. |
-| **Labels:** | NonAgentivePhysicalObject |
-
-### Knowledge Domain Resources:
-
-|     |     |
-| --- | --- |
-| **Related Domain Resources:** | Dolce D18: “within Physical Objects, a special place have those those to which we ascribe intentions, beliefs, and desires. These are called Agentive, as opposite to Non-agentive. Intentionality is understood here as the capability of heading for/dealing with objects or states of the world. This is an important area of ontological investigation we haven’t properly explored yet, so our suggestions are really very preliminary”. |
-| **Comments:** |  |
-
-## EXISTENT CONCEPT: ATOM (EMMO)
-
-### General Concept Info:
-
-| **IRI:** |<http://emmo.info/emmo#EMMO_eb77076b_a104_42ac_a065_798b2d2809ad> |
-| --- | --- |
-| **OWL Type:** | Class |
-| **Concept Elucidation:** | An 'atom' is a 'nucleus' surrounded by an 'electron_cloud', i.e. a quantum system made of one or more bounded electrons. |
-| **Labels:** | Atom |
-
-### Knowledge Domain Resources:
-
-|     |     |
-| --- | --- |
-| **Related Domain Resources:** | European Materials Modelling Ontology v. 1.0.0 alpha 2: “Bonded Atom: an Atom that shares at least one electron to the atom-based entity of which is part of. A real bond between atoms is always something hybrid between covalent, metallic and ionic. In general, metallic and ionic bonds have atoms sharing electrons. The bond types that are covered by this definition are the strong electonic bonds: covalent, metallic and ionic. This class can be used to represent molecules as simplified quantum systems, in which outer molecule shared electrons are un-entangled with the inner shells of the atoms composing the molecule”; “Standalone Atom: an atom that does not share electrons with other atoms. A standalone atom can be bonded with other atoms by intermolecular forces (i.e. dipole–dipole, London dispersion force, hydrogen bonding), since this bonds does not involve electron sharing”; “Neutral Atom: A standalone atom that has no net charge”; “Ion Atom: standalone atom with an unbalanced number of electrons with respect to its atomic number”.  |
-| **Comments:** |  |
-
-## EXISTENT CONCEPT: ATOM (BWMD)
-
-### General Concept Info:
-
-| **IRI:** |<https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00131> |
-| --- | --- |
-| **OWL Type:** | Class |
-| **Concept Elucidation:** | Any kind of atom as described by https://de.wikipedia.org/wiki/Atom |
-| **Labels:** | Atom |
-
-### Knowledge Domain Resources:
-
-|     |     |
-| --- | --- |
-| **Related Domain Resources:** | <https://de.wikipedia.org/wiki/Atom>  |
-| **Comments:** |  |
-
-## EXISTENT CONCEPT: ATOM (EMMO-MECH-TEST)
-
-### General Concept Info:
-
-| **IRI:** |<http://emmo.info/emmo/middle/materials#EMMO_eb77076b_a104_42ac_a065_798b2d2809ad> |
-| --- | --- |
-| **OWL Type:** | Class |
-| **Concept Elucidation:** | An 'atom' is a 'nucleus' surrounded by an 'electron_cloud', i.e. a quantum system made of one or more bounded electrons. A standalone atom has direct part one 'nucleus' and one 'electron_cloud'. An O 'atom' within an O2 'molecule' is an 'e-bonded_atom'. In this material branch, H atom is a particular case, with respect to higher atomic number atoms, since as soon as it shares its electron it has no nucleus entangled electron cloud. We cannot say that H2 molecule has direct part two H atoms, but has direct part two H nucleus. |
-| **Labels:** | Atom |
-
-### Knowledge Domain Resources:
-
-|     |     |
-| --- | --- |
-| **Related Domain Resources:** | European Materials Modelling Ontology v. 1.0.0 alpha 2: “Bonded Atom: an Atom that shares at least one electron to the atom-based entity of which is part of. A real bond between atoms is always something hybrid between covalent, metallic and ionic. In general, metallic and ionic bonds have atoms sharing electrons. The bond types that are covered by this definition are the strong electronic bonds: covalent, metallic and ionic. This class can be used to represent molecules as simplified quantum systems, in which outer molecule shared electrons are un-entangled with the inner shells of the atoms composing the molecule”; “Standalone Atom: an atom that does not share electrons with other atoms. A standalone atom can be bonded with other atoms by intermolecular forces (i.e. dipole–dipole, London dispersion force, hydrogen bonding), since this bonds does not involve electron sharing”; “Neutral Atom: A standalone atom that has no net charge”; “Ion Atom: standalone atom with an unbalanced number of electrons with respect to its atomic number”.   |
-| **Comments:** |  |
