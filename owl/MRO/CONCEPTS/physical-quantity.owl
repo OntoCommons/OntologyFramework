@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/arkop/ontologies/2023/7/untitled-ontology-303#"
+     xml:base="http://www.semanticweb.org/arkop/ontologies/2023/7/untitled-ontology-303"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:emmo="http://emmo.info/emmo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:metadata="http://www.ontocommons.edu/common/metadata#"
+     xmlns:common-annotation="http://www.purl.ontocommons.edu/tro/common-annotation#"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+     xmlns:AnnotationVocabulary1="https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+    <owl:Ontology rdf:about="http://www.ontolocommons.eu/mro/bridge">
+        <terms:description xml:lang="en">contains bridge concept &quot;Physical quantity&quot;</terms:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 -->
+
+    <owl:AnnotationProperty rdf:about="http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom -->
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/explanatoryNote -->
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/explanatoryNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
+    <!-- http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalQuality -->
+
+    <owl:Class rdf:about="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalQuality"/>
+    
+
+
+    <!-- http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4 -->
+
+    <owl:Class rdf:about="http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalQuality"/>
+        <emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9>Physical Quantities are properties associated with a physical entity (qua physical) for which there is a standardized definition capable of supporting quantification, and which can either be observed under practically achievable experimental conditions or predicted by means of a theoretical model apt to generalize observations. It should be noted that Physical Quantities need not necessarily pertain to the domain of physics, understood as a discipline.</emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9>
+        <rdfs:label>Physical quantity</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">A physical quantity is a physical property of a material or system that can be quantified by measurement. A physical quantity can be expressed as a value, which is the algebraic multiplication of a numerical value and a unit.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">A type of property of a product where the meaning and value of the property depend on the method and conditions by which it was measured
+Material properties are representative of all engineering properties that are defined by a specified testing method [whereas] an engineering property characterises some aspect of the behaviour of a product.
+“The following are the fundamental concepts and assumptions related to the representation of engineering properties: 
+· multiple representations of a property are possible including the use of numeric values, parametric or fundamental equations, graphical representations and non-numeric values (NOTE The distinction between a concept and the representation of a concept is described in ISO 10303-43);
+· the value of a property may be assigned or measured; 
+· if the value is measured, the resulting value will depend on the method of measurement and on the conditions used in applying the method; 
+· if the value is assigned, the conditions under which that assignment is valid may be specified; 
+· in the case of either assignment or measurement, the conditions under which the value is valid are expressed as a set of quantitative and qualitative data which form the data environment.&quot;</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Property of a phenomenon, body, or substance, to which a number can be assigned with respect to a reference.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Quantitative characterisation of an aspect of a physical entity, phenomenon, event, process, transformation, relation, system, or substance.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Systems of quantities and systems of units can be treated in many consistent, but different, ways. Which treatment to use is only a matter of convention. 
+The quantities and the relations among them are essentially infinite in number and are continually evolving as new fields of science and technology are developed. Thus, it is not possible to list all these quantities and relations in this International Standard; instead, a selection of the more commonly used quantities and the relations among them is presented.</rdfs:seeAlso>
+        <skos:altLabel>Physical property</skos:altLabel>
+        <skos:altLabel>Quantity</skos:altLabel>
+        <skos:definition xml:lang="en">Property of a phenomenon, body, or substance, to which a number can be assigned with respect to a reference (i.e., quantifiable) by a standard mechanism.</skos:definition>
+        <skos:hiddenLabel>Physical Characteristic</skos:hiddenLabel>
+        <skos:hiddenLabel>Physical Quality</skos:hiddenLabel>
+        <skos:hiddenLabel>Property</skos:hiddenLabel>
+        <skos:hiddenLabel>Quality</skos:hiddenLabel>
+        <AnnotationVocabulary:explanatoryNote xml:lang="en">This engineered OntoCommons bridge-concept aims to provide a MLO-friendly, pragmatic restriction of an extremely general family of notions which can be characterised in vastly different ways; notions which generally fall under the labels of ‘property’, ‘attribute’, ‘quality’, ‘characteristic’, ‘quantity’. Given the aim, the characteristics of the target MLOs, and, more importantly, the requests coming from MLOs’ stakeholders given OntoCommons’ survey, it was decided to focus on a list of features encompassing property quantification, the existence of a standardised and shared definition/procedure ensuring objectivity, and the relevant aspects being grounded -directly or indirectly- in actual, and not just possible (to restrict the number of problematic cases by avoiding merely hypothetical ones), observability. 
+There was an effort to ensure that the proposed bridge-concept would be aligned with golden standards: specifically, it is in line with ISO 80000, which also provides a (nominally partial, yet extremely rich) extensional definition of the class; it is also aligned with ISO10303-45, though we ultimately decided to explicitly include quantities associated with physical objects which do not pertain to the domain of physics, understood as discipline, to ensure coverage of all the relevant MLOs, in line with our goals. Doing so also avoids some well-known issues related to demarcation problems. Notably, the resulting definition is compatible with the ones provided by well known and pervasively employed domain resources, such as Wikipedia, Wikidata, and another golden standard, the International Vocabulary of Metrology. This will ensure immediateness and intuitiveness for domain experts and ontologists, while at the same time improving the usability for non-experts. The risk of meaning/conceptual shift, and thus, obsoleteness, is also reduced. That said, the proposed definition cannot be reduced to said resources, insofar as it attempts to go beyond them explicitly pointing at possible pitfalls and nuances that need to be considered when attempting an alignment.</AnnotationVocabulary:explanatoryNote>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9>Arguably, BFO’s Specifically Dependent Continuants cover the vast majority of the entities commonly labelled as ‘properties’ etc. -in line with what has been said above- in the guise of a metaphysical commitment to tropes. The ones which are not covered might be seen as falling under Generically Dependent Continuant, yet said class does not seem to be appropriate as an alignment target. BFO’s Role class is likewise not a good candidate, since they explicitly do not cover properties whose possession has consequences for the physical make-up of the bearer. As such, the only options left are Disposition and Quality. Given the focus on the observation process outlined in the proposed definition of Physical Quantity, it might be tempting to connect the latter to a specific kind of BFO:Disposition, yet that would mean vastly disregarding BFO’s background philosophical assumptions, internal organization, and factual approach to the description of similar cases. Taking those into account the proper connection is arguably with BFO:Quality. The Quality class is not restricted to quantities, nor bound by actual-observation grounding or the possibility of supporting quantification; as such the proposed OntoCommons bridge-concept, Physical Quantity, can only be a subclass of the former.</emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalQuality"/>
+        <emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 xml:lang="en">In the TLO DOLCE, the class Quality arguably covers the entirety of the entities commonly labelled as ‘properties’ etc. -in line with what has been said above-. Analogously to BFO, DOLCE approaches properties via a commitment to tropes, though the relevant theoretical framework is fairly more complex. As such, it seems appropriate to look for a connection in the subclasses of DOLCE:Quality. The most pertinent target is arguably the class Physical Quality, which covers one of the core traits characterising the proposed bridge-concept, Physical Quantity. Since there are no explicit references to actual-observation grounding for the sake of generality, and qualities implicitly include non quantifiable properties, qua qualities,  the proposed OntoCommons bridge-concept, Physical Quantity, should be considered a specification of the relevant Dolce class, and, thus, a subclass of the latter. This last point is also supported by the explicit examples of usage provided in DOLCE’s documentation.</emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">A physical quantity is a physical property of a material or system that can be quantified by measurement. A physical quantity can be expressed as a value, which is the algebraic multiplication of a numerical value and a unit.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://en.wikipedia.org/wiki/Physical_quantity</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">A type of property of a product where the meaning and value of the property depend on the method and conditions by which it was measured
+Material properties are representative of all engineering properties that are defined by a specified testing method [whereas] an engineering property characterises some aspect of the behaviour of a product.
+“The following are the fundamental concepts and assumptions related to the representation of engineering properties: 
+· multiple representations of a property are possible including the use of numeric values, parametric or fundamental equations, graphical representations and non-numeric values (NOTE The distinction between a concept and the representation of a concept is described in ISO 10303-43);
+· the value of a property may be assigned or measured; 
+· if the value is measured, the resulting value will depend on the method of measurement and on the conditions used in applying the method; 
+· if the value is assigned, the conditions under which that assignment is valid may be specified; 
+· in the case of either assignment or measurement, the conditions under which the value is valid are expressed as a set of quantitative and qualitative data which form the data environment.&quot;</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://www.iso.org/standard/78581.html</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">Property of a phenomenon, body, or substance, to which a number can be assigned with respect to a reference.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://www.nist.gov/system/files/documents/pml/div688/grp40/International-Vocabulary-of-Metrology.pdf</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">Quantitative characterisation of an aspect of a physical entity, phenomenon, event, process, transformation, relation, system, or substance.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://www.wikidata.org/wiki/Q107715</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#c3ee91e8-fa2c-4012-b93c-8d83afe5bca4"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">Systems of quantities and systems of units can be treated in many consistent, but different, ways. Which treatment to use is only a matter of convention. 
+The quantities and the relations among them are essentially infinite in number and are continually evolving as new fields of science and technology are developed. Thus, it is not possible to list all these quantities and relations in this International Standard; instead, a selection of the more commonly used quantities and the relations among them is presented.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://www.iso.org/standard/76921.html</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

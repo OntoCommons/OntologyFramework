@@ -5,9 +5,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@base <http://ontocommons.eu/MRO/Product> .
+@base <http://ontocommons.eu/mro/bridge> .
 
-<http://ontocommons.eu/MRO/Product> rdf:type owl:Ontology .
+<http://ontocommons.eu/mro/bridge> rdf:type owl:Ontology ;
+                                    owl:imports <http://emmo.info/emmo/1.0.0-beta2/middle> ,
+                                                <http://www.ontocommons.eu/common/metadata> .
 
 #################################################################
 #    Annotation properties
@@ -49,86 +51,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> rdf:type owl:Class .
 
 
-###  http://ontocommons.eu/MRO#a8a6213d-438d-4a94-88b6-15398888bca9
-:a8a6213d-438d-4a94-88b6-15398888bca9 rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> ,
-                                                      <http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> ,
-                                                      <http://purl.obolibrary.org/obo/BFO_0000040> ,
-                                                      <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalObject> ;
-                                      rdfs:isDefinedBy """A Good is something which is explicitly offered on the market for purchase or barter, whose ownership is transferred to the purchaser as a condition for the completion of the transaction, and which is associated with a specific material entity which doesn’t merely act as a legal placeholder or as a contingent medium to the end of completing a transaction.
-
-Goods are the outcome of some kind of practical activity which needn’t have been performed, directly, or indirectly, by the organization or individual offering the Good on the market, and which needn’t involve a transformation of the item which is then offered for purchase. It should be noted that an intellectual activity might be prodromic to the performance of a practical activity whose result is a Good.
-
-Goods can either belong to the purchaser for an indefinite, or predetermined, period of time after the completion of a transaction; the ownership can be transferred at any point during the transaction and needn’t grant full legal rights over the owned article. They are generally considered to be tangible and conceptualised as reducible, or identical to specific material entities, though said characteristics do not pertain to the domain of economics, and are at most derivative. 
-
-Goods can indifferently be artefacts or not artefacts. Likewise, they can indifferently be raw materials or processed materials."""@en ;
-                                      skos:prefLabel "Goods" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> ;
-   rdfs:comment "In EMMO, the holistic perspective represents entities according to their relations to the whole. Given EMMO’s framework and background assumptions, it seems appropriate to look for a connection with the proposed OntoCommons bridge-concept, Commercial Product, in this branch. EMMO:Role, or one of its subclasses, seems to be an appropriate candidate for a meaningful connection, though it should be noted that the same entity could be represented differently under different guises (and not as something that is being explicitly offered on the market for purchase or barter). For instance, it might be worth considering some goods under the reductionistic or physicalistic perspective, or -within the boundaries of the holistic perspective- investigating the establishment of a connection with EMMO:Whole. It should be noted that the treatment is consistent with that for other scenarios involving posited entities connected with the OntoCommons concepts belonging to the concept cluster: Commercial Product."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000040> ;
-   rdfs:comment "Given BFO’s internal organisation, the most pertinent option for an alignment seems to be BFO:Material Entity. Arguably, the relevant scenarios would be represented in BFO as involving a BFO:Material Entity in which inheres (BFO) a certain BFO:Role, possibly with further specifications about the transaction process and its participants. BFO’s documentation is perfectly in line with some of the traits characterising the proposed OntoCommons bridge-concept, Good (Commercial), and the alignment is reinforced by the treatment of supposedly similar concepts in MLOs based on BFO. It might be suggested that a more informative alignment could be established with subclasses of BFO:Material Entity (i.e. BFO:Object, BFO:Object Aggregate, or BFO:Fiat Object); however the classes are not mutually disjoint, as the relevant BFO universals are not rigid. Everything considered, there are good prima facie good reasons to believe that the link between the proposed OntoCommons bridge-concept and  BFO:Material Entity is one of rdfs:subClassOf, as the specifications considered act as constraints on BFO:Material Entity."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalObject> ;
-   rdfs:comment "Taking into account DOLCE’s background philosophical assumptions and internal organisation, DOLCE: Physical Object seems to be the best candidate for a connection, with no real alternatives, if not among its subclasses. The connection is quite straightforward and supported by the relevant documentation. It might appear prima facie plausible to connect the proposed OntoCommons bridge-concept, Good (Commercial) directly to DOLCE:Non-Agentive Physical Object, in order to establish a more informative connection, however nothing in the proposed definition bars goods from having intentions, beliefs and desires (consider for instance pets and livestock); so that link would be too restrictive, and ultimately mistaken."@en
- ] .
-
-
-###  http://ontocommons.eu/MRO#eddb062f-bbbf-4081-a673-64fd7b163918
-:eddb062f-bbbf-4081-a673-64fd7b163918 rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://ontocommons.eu/MRO/Product#4eb83551-92f3-4506-b5f8-8546a35b62b9> ,
-                                                      <http://purl.obolibrary.org/obo/BFO_0000015> ,
-                                                      <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Stative> ,
-                                                      [ rdf:type owl:Class ;
-                                                        owl:unionOf ( <http://emmo.info/emmo#EMMO_1efe8b96_e006_4a33_bc9a_421406cbb9f0>
-                                                                      <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3>
-                                                                    )
-                                                      ] ;
-                                      rdfs:isDefinedBy """A Service is something which is explicitly offered on the market for purchase or barter, and whose ownership is not transferred to the purchaser as a condition for the completion of the transaction. It should be noted that the relevant transaction can involve the transference of legal rights (ownership included), as long as the latter are not constitutive of the service. 
-
-Services consist in the access to some benefits, which might involve the performance of some kind of practical and/or intellectual activity. The benefits have to be made directly, or indirectly, available by the organization or individual offering the Service on the market, i.e. the provider.
-
-The access to the relevant benefits can be temporary (be the duration predetermined or not) or permanent; access to the benefit can be given, and revoked, at any point during the transaction. Services are generally considered to be intangible and conceptualised as reified activities, though said characteristics do not pertain to the domain of economics, and are at most derivative."""@en ;
-                                      skos:prefLabel "Commercial Service" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000015> ;
-   rdfs:comment "BFO’s taxonomy is hinged on the distinction between Occurrents and Continuants; the ontology is also strongly opposed to reification and allows only “spatial” entities under BFO:Immaterial Entity, on the side of Continuants. Together, these two points hint at the fact that BFO:Occurrent, or one of its subclasses, should be the most suited candidate for the establishment of an informative connection. In fact, while the core trait concerning ownership-transference is arguably neutral with respect to the ontological categorisation, there are good reasons to think that services, characterised as accesses to benefits, have to occur over time, and should be understood specifically as processes (BFO:Process’s elucidation being in line with the common understanding of the notion). While presumably highly heterogeneous, services should all share some commonalities (e.g. involve independent continuants with certain deontological roles: costumer, provider); that being the case it seems appropriate to assume that the proposed OntoCommons bridge-concept, Service (Commercial) should be linked with BFO:Process by means of the rdfs:subClassOf relation. The alignment is reinforced by the treatment of supposedly similar concepts in MLOs based on BFO (some of which considered infra in this template) and the lack of real alternatives. Ultimately, the resulting link is also straightforward and usable."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Stative> ;
-   rdfs:comment "The distinction between Endurants and Perdurants in DOLCE is almost as important as that between Occurrents and Continuants in BFO. It is thus prima facie reasonable to begin looking for a connections starting from the subclasses of DOLCE:Perdurant, on the basis of the similarities between DOLCE:Perdurant and BFO:Occurrent. In fact, the sub-class of DOLCE:Perdurant, DOLCE:Process, seems analogous to BFO:Process under many respects, ontological significance first and foremost. Then again, the most informative candidate for a connection under the Perdurants-branch seems its super class: DOLCE:Stative, as some of the relevant cases might arguably be characterised as States given the core homeomericity trait. Still, DOLCE is not opposed to reifications, and it thus worth considering alternatives such as DOLCE:Non-Agentive Social Object for the connection. However, it is far from clear whether the resulting conceptualisation would be satisfactory in all -or even in most- cases which fall under the proposed OntoCommons bridge-concept, Service (Commercial), so the first option considered seems ultimately more informative/appropriate. The proposed semantic relation is that of rdfs:subClassOf, with some Agentive Social Objects necessarily being involved in (participating in) the Stative, acting as further constraints."@en
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
-   owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget [ rdf:type owl:Class ;
-                         owl:unionOf ( <http://emmo.info/emmo#EMMO_1efe8b96_e006_4a33_bc9a_421406cbb9f0>
-                                       <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3>
-                                     )
-                       ] ;
-   rdfs:comment "In EMMO, the holistic perspective represents entities according to their relations to the whole. Given EMMO’s framework and background assumptions, it seems appropriate to look for a connection with the proposed OntoCommons bridge-concept, Commercial Product, in this branch. Both EMMO:Role and EMMO:Whole, or one of their subclasses, seems to be appropriate candidates for a meaningful connection, depending on how the service is conceptualised. Again, it should be noted that the same entity could be represented differently under different guises. Given certain representational ends, there are thus reasons to consider connections with other perspectives, e.g. with EMMO:Process under the Persistence perspective. It should be noted that the treatment is consistent with that for other scenarios involving posited entities connected with the OntoCommons concepts belonging to the concept cluster: Commercial Product."@en
- ] .
-
-
 ###  http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249
 <http://ontocommons.eu/MRO#72caf67a_93ff_4eda_b925_71658fd2c249> rdf:type owl:Class ;
                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
@@ -167,34 +89,187 @@ it is pivotal to be wary of intuitions which might derive from unrelated conside
  ] .
 
 
-###  http://ontocommons.eu/MRO/Product#2d656c8b-1710-4957-8764-9502686893f6
-<http://ontocommons.eu/MRO/Product#2d656c8b-1710-4957-8764-9502686893f6> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf <http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> ;
-                                                                         skos:prefLabel "Intellectual Article" .
+###  http://ontocommons.eu/mro/bridge#a8a6213d-438d-4a94-88b6-15398888bca9
+:a8a6213d-438d-4a94-88b6-15398888bca9 rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> ,
+                                                      <http://ontocommons.eu/mro/bridge#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> ,
+                                                      <http://purl.obolibrary.org/obo/BFO_0000040> ,
+                                                      <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalObject> ;
+                                      rdfs:isDefinedBy """A Good is something which is explicitly offered on the market for purchase or barter, whose ownership is transferred to the purchaser as a condition for the completion of the transaction, and which is associated with a specific material entity which doesn’t merely act as a legal placeholder or as a contingent medium to the end of completing a transaction.
+
+Goods are the outcome of some kind of practical activity which needn’t have been performed, directly, or indirectly, by the organization or individual offering the Good on the market, and which needn’t involve a transformation of the item which is then offered for purchase. It should be noted that an intellectual activity might be prodromic to the performance of a practical activity whose result is a Good.
+
+Goods can either belong to the purchaser for an indefinite, or predetermined, period of time after the completion of a transaction; the ownership can be transferred at any point during the transaction and needn’t grant full legal rights over the owned article. They are generally considered to be tangible and conceptualised as reducible, or identical to specific material entities, though said characteristics do not pertain to the domain of economics, and are at most derivative. 
+
+Goods can indifferently be artefacts or not artefacts. Likewise, they can indifferently be raw materials or processed materials."""@en ;
+                                      skos:prefLabel "Goods" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3> ;
+   rdfs:comment "In EMMO, the holistic perspective represents entities according to their relations to the whole. Given EMMO’s framework and background assumptions, it seems appropriate to look for a connection with the proposed OntoCommons bridge-concept, Commercial Product, in this branch. EMMO:Role, or one of its subclasses, seems to be an appropriate candidate for a meaningful connection, though it should be noted that the same entity could be represented differently under different guises (and not as something that is being explicitly offered on the market for purchase or barter). For instance, it might be worth considering some goods under the reductionistic or physicalistic perspective, or -within the boundaries of the holistic perspective- investigating the establishment of a connection with EMMO:Whole. It should be noted that the treatment is consistent with that for other scenarios involving posited entities connected with the OntoCommons concepts belonging to the concept cluster: Commercial Product."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000040> ;
+   rdfs:comment "Given BFO’s internal organisation, the most pertinent option for an alignment seems to be BFO:Material Entity. Arguably, the relevant scenarios would be represented in BFO as involving a BFO:Material Entity in which inheres (BFO) a certain BFO:Role, possibly with further specifications about the transaction process and its participants. BFO’s documentation is perfectly in line with some of the traits characterising the proposed OntoCommons bridge-concept, Good (Commercial), and the alignment is reinforced by the treatment of supposedly similar concepts in MLOs based on BFO. It might be suggested that a more informative alignment could be established with subclasses of BFO:Material Entity (i.e. BFO:Object, BFO:Object Aggregate, or BFO:Fiat Object); however the classes are not mutually disjoint, as the relevant BFO universals are not rigid. Everything considered, there are good prima facie good reasons to believe that the link between the proposed OntoCommons bridge-concept and  BFO:Material Entity is one of rdfs:subClassOf, as the specifications considered act as constraints on BFO:Material Entity."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :a8a6213d-438d-4a94-88b6-15398888bca9 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#PhysicalObject> ;
+   rdfs:comment "Taking into account DOLCE’s background philosophical assumptions and internal organisation, DOLCE: Physical Object seems to be the best candidate for a connection, with no real alternatives, if not among its subclasses. The connection is quite straightforward and supported by the relevant documentation. It might appear prima facie plausible to connect the proposed OntoCommons bridge-concept, Good (Commercial) directly to DOLCE:Non-Agentive Physical Object, in order to establish a more informative connection, however nothing in the proposed definition bars goods from having intentions, beliefs and desires (consider for instance pets and livestock); so that link would be too restrictive, and ultimately mistaken."@en
+ ] .
 
 
-###  http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64
-<http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> rdf:type owl:Class ;
-                                                                         owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                               owl:unionOf ( :a8a6213d-438d-4a94-88b6-15398888bca9
-                                                                                                             <http://ontocommons.eu/MRO/Product#2d656c8b-1710-4957-8764-9502686893f6>
-                                                                                                           )
-                                                                                             ] ;
-                                                                         rdfs:subClassOf <http://ontocommons.eu/MRO/Product#4eb83551-92f3-4506-b5f8-8546a35b62b9> ;
-                                                                         skos:prefLabel "Commercial Article" .
+###  http://ontocommons.eu/mro/bridge#eddb062f-bbbf-4081-a673-64fd7b163918
+:eddb062f-bbbf-4081-a673-64fd7b163918 rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9> ,
+                                                      <http://purl.obolibrary.org/obo/BFO_0000015> ,
+                                                      <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Stative> ,
+                                                      [ rdf:type owl:Class ;
+                                                        owl:unionOf ( <http://emmo.info/emmo#EMMO_1efe8b96_e006_4a33_bc9a_421406cbb9f0>
+                                                                      <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3>
+                                                                    )
+                                                      ] ;
+                                      rdfs:isDefinedBy """A Service is something which is explicitly offered on the market for purchase or barter, and whose ownership is not transferred to the purchaser as a condition for the completion of the transaction. It should be noted that the relevant transaction can involve the transference of legal rights (ownership included), as long as the latter are not constitutive of the service. 
+
+Services consist in the access to some benefits, which might involve the performance of some kind of practical and/or intellectual activity. The benefits have to be made directly, or indirectly, available by the organization or individual offering the Service on the market, i.e. the provider.
+
+The access to the relevant benefits can be temporary (be the duration predetermined or not) or permanent; access to the benefit can be given, and revoked, at any point during the transaction. Services are generally considered to be intangible and conceptualised as reified activities, though said characteristics do not pertain to the domain of economics, and are at most derivative."""@en ;
+                                      skos:prefLabel "Commercial Service" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Class ;
+                         owl:unionOf ( <http://emmo.info/emmo#EMMO_1efe8b96_e006_4a33_bc9a_421406cbb9f0>
+                                       <http://emmo.info/emmo#EMMO_4f226cf3_6d02_4d35_8566_a9e641bc6ff3>
+                                     )
+                       ] ;
+   rdfs:comment "In EMMO, the holistic perspective represents entities according to their relations to the whole. Given EMMO’s framework and background assumptions, it seems appropriate to look for a connection with the proposed OntoCommons bridge-concept, Commercial Product, in this branch. Both EMMO:Role and EMMO:Whole, or one of their subclasses, seems to be appropriate candidates for a meaningful connection, depending on how the service is conceptualised. Again, it should be noted that the same entity could be represented differently under different guises. Given certain representational ends, there are thus reasons to consider connections with other perspectives, e.g. with EMMO:Process under the Persistence perspective. It should be noted that the treatment is consistent with that for other scenarios involving posited entities connected with the OntoCommons concepts belonging to the concept cluster: Commercial Product."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000015> ;
+   rdfs:comment "BFO’s taxonomy is hinged on the distinction between Occurrents and Continuants; the ontology is also strongly opposed to reification and allows only “spatial” entities under BFO:Immaterial Entity, on the side of Continuants. Together, these two points hint at the fact that BFO:Occurrent, or one of its subclasses, should be the most suited candidate for the establishment of an informative connection. In fact, while the core trait concerning ownership-transference is arguably neutral with respect to the ontological categorisation, there are good reasons to think that services, characterised as accesses to benefits, have to occur over time, and should be understood specifically as processes (BFO:Process’s elucidation being in line with the common understanding of the notion). While presumably highly heterogeneous, services should all share some commonalities (e.g. involve independent continuants with certain deontological roles: costumer, provider); that being the case it seems appropriate to assume that the proposed OntoCommons bridge-concept, Service (Commercial) should be linked with BFO:Process by means of the rdfs:subClassOf relation. The alignment is reinforced by the treatment of supposedly similar concepts in MLOs based on BFO (some of which considered infra in this template) and the lack of real alternatives. Ultimately, the resulting link is also straightforward and usable."@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :eddb062f-bbbf-4081-a673-64fd7b163918 ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#Stative> ;
+   rdfs:comment "The distinction between Endurants and Perdurants in DOLCE is almost as important as that between Occurrents and Continuants in BFO. It is thus prima facie reasonable to begin looking for a connections starting from the subclasses of DOLCE:Perdurant, on the basis of the similarities between DOLCE:Perdurant and BFO:Occurrent. In fact, the sub-class of DOLCE:Perdurant, DOLCE:Process, seems analogous to BFO:Process under many respects, ontological significance first and foremost. Then again, the most informative candidate for a connection under the Perdurants-branch seems its super class: DOLCE:Stative, as some of the relevant cases might arguably be characterised as States given the core homeomericity trait. Still, DOLCE is not opposed to reifications, and it thus worth considering alternatives such as DOLCE:Non-Agentive Social Object for the connection. However, it is far from clear whether the resulting conceptualisation would be satisfactory in all -or even in most- cases which fall under the proposed OntoCommons bridge-concept, Service (Commercial), so the first option considered seems ultimately more informative/appropriate. The proposed semantic relation is that of rdfs:subClassOf, with some Agentive Social Objects necessarily being involved in (participating in) the Stative, acting as further constraints."@en
+ ] .
 
 
-###  http://ontocommons.eu/MRO/Product#4eb83551-92f3-4506-b5f8-8546a35b62b9
-<http://ontocommons.eu/MRO/Product#4eb83551-92f3-4506-b5f8-8546a35b62b9> rdf:type owl:Class ;
-                                                                         owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                               owl:unionOf ( :eddb062f-bbbf-4081-a673-64fd7b163918
-                                                                                                             <http://ontocommons.eu/MRO/Product#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64>
-                                                                                                           )
-                                                                                             ] ;
-                                                                         rdfs:comment """A Commercial Product is something which is explicitly offered on the market for purchase or barter. Commercial Products can consist in the outcome of some kind of practical and/or intellectual activity, or in the access to some benefits. 
-In the first scenario, the activity needn’t necessarily have been performed, directly, or indirectly, by the organization or individual offering the Commercial Product on the market, and the activity itself needn’t involve a transformation of the item which is then offered for purchase. In the second case, the benefit has to be made directly, or indirectly, available by the organization or individual offering the Commercial Product on the market, and the access to the relevant benefit can be temporary (be the duration predetermined or not) or permanent.
-Commercial Products can either belong to the purchaser for an indefinite period of time after the completion of a transaction, or the transference of their ownership might not figure as a condition for the completion of the transaction. They can indifferently be either tangible or intangible, artefacts or not artefacts. Likewise, they can indifferently be e.g., raw materials, processed materials, goods, intellectual properties, services.""" ;
-                                                                         skos:prefLabel "Commercial Product" .
+###  http://ontocommons.eu/mro/bridge#2d656c8b-1710-4957-8764-9502686893f6
+<http://ontocommons.eu/mro/bridge#2d656c8b-1710-4957-8764-9502686893f6> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://ontocommons.eu/mro/bridge#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> ;
+                                                                        skos:prefLabel "Intellectual Article" .
+
+
+###  http://ontocommons.eu/mro/bridge#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64
+<http://ontocommons.eu/mro/bridge#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64> rdf:type owl:Class ;
+                                                                        owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( :a8a6213d-438d-4a94-88b6-15398888bca9
+                                                                                                            <http://ontocommons.eu/mro/bridge#2d656c8b-1710-4957-8764-9502686893f6>
+                                                                                                          )
+                                                                                            ] ;
+                                                                        rdfs:subClassOf <http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9> ;
+                                                                        skos:prefLabel "Commercial Article" .
+
+
+###  http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9
+<http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9> rdf:type owl:Class ;
+                                                                        owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( :eddb062f-bbbf-4081-a673-64fd7b163918
+                                                                                                            <http://ontocommons.eu/mro/bridge#27e95ac3-0b11-4ebb-be24-9cf00a9a4a64>
+                                                                                                          )
+                                                                                            ] ;
+                                                                        <http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9> """A Commercial Product is something which is explicitly offered on the market for purchase or barter. Commercial Products can consist in the outcome of some kind of practical and/or intellectual activity, or in the access to some benefits. 
+In the first scenario, the activity needn’t necessarily have been performed, directly, or indirectly, by the organization or individual offering the Commercial Product on the market, and the activity itself needn’t involve a transformation of the item which is then offered for purchase. In the second case, the benefit has to be made directly, or indirectly, available by the organization or individual offering the Commercial Product on the market, and the access to the relevant benefit can be temporary (be the duration predetermined or not) or permanent. 
+Commercial Products can either belong to the purchaser for an indefinite period of time after the completion of a transaction, or the transference of their ownership might not figure as a condition for the completion of the transaction. They can indifferently be either tangible or intangible, artefacts or not artefacts. Likewise, they can indifferently be e.g., raw materials, processed materials, goods, intellectual properties, services."""@en ;
+                                                                        rdfs:isDefinedBy "https://raw.githubusercontent.com/OntoCommons/OntologyFramework/dev/owl/MRO/doc/Commercial%20Product.md" ;
+                                                                        rdfs:label "Commercial Product" ;
+                                                                        rdfs:seeAlso """Commodities offered for sale
+An artifact that has been created by someone or some process"""@en ,
+                                                                                     """In marketing, a product is an object, or system, or service made available for consumer use as of the consumer demand; it is anything that can be offered to a market to satisfy the desire or need of a customer.
+In retailing, products are often referred to as merchandise, and in manufacturing, products are bought as raw materials and then sold as finished goods. A service is also regarded as a type of product."""@en ,
+                                                                                     """Output of an organization that can be produced without any transaction taking place between the organization and the customer. 
+Production of a product is achieved without any transaction necessarily taking place between provider and customer, but can often involve this service element upon its delivery to the customer. 
+The dominant element of a product is that it is generally tangible.
+Hardware is tangible and its amount is a countable characteristic (e.g. tyres). Processed materials are tangible and their amount is a continuous characteristic (e.g. fuel and soft drinks). Hardware and processed materials are often referred to as goods 
+Software consists of information regardless of delivery medium (e.g. computer programme, mobile phone app, instruction manual, dictionary content, musical composition copyright, driver's license)."""@en ,
+                                                                                     "Result of work that can be offered to a market"@en ,
+                                                                                     """“any goods or service” 
+“the product can be categorized as follows: — services (e.g. transport); — software (e.g. computer program, dictionary); — hardware (e.g. engine mechanical part); — processed materials (e.g. lubricant)” 
+“services have tangible and intangible elements. Provision of a service can involve, for example, the following: — an activity performed on a customer-supplied tangible product (e.g. automobile to be repaired); — an activity performed on a customer-supplied intangible product (e.g. the income statement needed to prepare a tax return); — the delivery of an intangible product (e.g. the delivery of information in the context of knowledge transmission); — the creation of ambience for the customer (e.g. in hotels and restaurants). Software consists of information and is generally intangible and can be in the form of approaches, transactions or procedures. Hardware is generally tangible and its amount is a countable characteristic. Processed materials are generally tangible and their amount is a continuous characteristic”"""@en ;
+                                                                        skos:altLabel "Product" ,
+                                                                                      "Product (Commercial)" ;
+                                                                        skos:hiddenLabel "Article" ,
+                                                                                         "Commodity" ,
+                                                                                         "Good" ,
+                                                                                         "Merchandise" ,
+                                                                                         "Purchasable" ,
+                                                                                         "Service" ,
+                                                                                         "Transactable Entity" ,
+                                                                                         "Ware" ;
+                                                                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/explanatoryNote> """This engineered OntoCommons bridge-concept aims to provide an extremely general umbrella notion focused on a few defining traits for a family of concepts which are pivotal in business practice, from the perspective of industrial stakeholders. The decision to follow this strategy was made in accordance with the requests coming from MLOs’ stakeholders given OntoCommons’ survey. 
+The defining trait grouping up the relevant individuals was identified in their being actually, and explicitly, offered for purchase or barter on the market; the choice to include the two specifications above (actuality and explicitness) being due to the fact that, in principle, almost anything can be sold, and implicit availability for purchase or barter seemed inadequate given the aims of the project, and harder to rein in. 
+The focus is on the economic aspects; though the term is also associated with manufacturing/transformative ones, which can arguably be the basis for a different bridge-concept. A composite characterisation of the concept, possibly closer to the term’s use, would have run the risk of being vague and, thus, incapable of capturing in a formal way any of the underlying ideas. Again, a manufacturing-related characterisation also risked collapsing on quite different notions, related to the concepts of (generic) Output (of a process) or Equipment, as they are commonly characterised and understood. It was decided to focus specifically on one direction of the transaction to address and avoid ambiguities which might arise, in practice, in ontologies built specifically for industrial usage. 
+Given the incompatibility of golden standards (ISO 9000 and ISO 14040, inter alia and significantly), on the notion of product, a choice had to be made: in line with what has been said above, it was decided to follow more closely ISO 14040, explicitly addressing all the divergences which might have otherwise resulted in ambiguities. The choice was also influenced by the fact that ISO 14040’ definition is closer to the ones put forward in other well-known resources. That said, ISO 9000 is extensively referenced in the definition of the OntoCommons bridge-concept Article (Commercial), and the standard is also directly taken into account in the definition of two other OntoCommons bridge-concepts: Good (Commercial) and Service (Commercial), whereas all these concepts belong to the OntoCommons concept cluster hinged on Commercial Product.
+It should be added that, while an analysis of a selected sample of ontologies showed that a narrower concept might have avoided issues pertaining to alignment arising from trans-categoricity, the preemptive investigation also made patent an implicit preference (if not a need) of stakeholders for a broad concept of product (closer to ISO 14040), at least when MLOs were concerned. 
+Other possibly problematic points were addressed by making traits’ values/value gaps explicit, value gaps being prevalent due to the organisation of the concept cluster and the broadness of the bridge-concept Commercial Product; a more in-depth explanation of some of the relevant traits/values can be found in the comments to the elucidations of other bridge-concepts belonging to the cluster: Commercial Product. It was also decided not to list “paradigmatic  (yet not strictly necessary) characteristics” in order to avoid introducing biases which might have affected domain experts, ontologists, and generic users alike."""@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9> ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget """Commodities offered for sale
+An artifact that has been created by someone or some process"""@en ;
+   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom> "http://wordnetweb.princeton.edu/perl/webwn?s=product"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9> ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget """In marketing, a product is an object, or system, or service made available for consumer use as of the consumer demand; it is anything that can be offered to a market to satisfy the desire or need of a customer.
+In retailing, products are often referred to as merchandise, and in manufacturing, products are bought as raw materials and then sold as finished goods. A service is also regarded as a type of product."""@en ;
+   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom> "https://en.wikipedia.org/wiki/Product_(business)"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9> ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget """Output of an organization that can be produced without any transaction taking place between the organization and the customer. 
+Production of a product is achieved without any transaction necessarily taking place between provider and customer, but can often involve this service element upon its delivery to the customer. 
+The dominant element of a product is that it is generally tangible.
+Hardware is tangible and its amount is a countable characteristic (e.g. tyres). Processed materials are tangible and their amount is a continuous characteristic (e.g. fuel and soft drinks). Hardware and processed materials are often referred to as goods 
+Software consists of information regardless of delivery medium (e.g. computer programme, mobile phone app, instruction manual, dictionary content, musical composition copyright, driver's license)."""@en ;
+   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom> "https://www.iso.org/standard/45481.html"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9> ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget "Result of work that can be offered to a market"@en ;
+   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom> "https://www.wikidata.org/wiki/Q2424752"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://ontocommons.eu/mro/bridge#4eb83551-92f3-4506-b5f8-8546a35b62b9> ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget """“any goods or service” 
+“the product can be categorized as follows: — services (e.g. transport); — software (e.g. computer program, dictionary); — hardware (e.g. engine mechanical part); — processed materials (e.g. lubricant)” 
+“services have tangible and intangible elements. Provision of a service can involve, for example, the following: — an activity performed on a customer-supplied tangible product (e.g. automobile to be repaired); — an activity performed on a customer-supplied intangible product (e.g. the income statement needed to prepare a tax return); — the delivery of an intangible product (e.g. the delivery of information in the context of knowledge transmission); — the creation of ambience for the customer (e.g. in hotels and restaurants). Software consists of information and is generally intangible and can be in the form of approaches, transactions or procedures. Hardware is generally tangible and its amount is a countable characteristic. Processed materials are generally tangible and their amount is a continuous characteristic”"""@en ;
+   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom> "https://www.iso.org/standard/23146.html"
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000015

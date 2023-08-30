@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/arkop/ontologies/2023/7/untitled-ontology-303#"
+     xml:base="http://www.semanticweb.org/arkop/ontologies/2023/7/untitled-ontology-303"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:emmo="http://emmo.info/emmo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:metadata="http://www.ontocommons.edu/common/metadata#"
+     xmlns:common-annotation="http://www.purl.ontocommons.edu/tro/common-annotation#"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+     xmlns:AnnotationVocabulary1="https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+    <owl:Ontology rdf:about="http://www.ontolocommons.eu/mro/bridge">
+        <terms:description xml:lang="en">contains bridge term &quot;Agent&quot;.</terms:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 -->
+
+    <owl:AnnotationProperty rdf:about="http://emmo.info/emmo#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom -->
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/excerptedFrom"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/explanatoryNote -->
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/explanatoryNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703 -->
+
+    <owl:Class rdf:about="http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    
+
+
+    <!-- http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#AgentivePhysicalObject -->
+
+    <owl:Class rdf:about="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#AgentivePhysicalObject">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf rdf:resource="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic#AgentivePhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontolocommons.eu/mro/bridge#e254e2c3-b430-4ddd-a032-2e2b88ea47a8 -->
+
+    <owl:Class rdf:about="http://www.ontolocommons.eu/mro/bridge#e254e2c3-b430-4ddd-a032-2e2b88ea47a8">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703"/>
+        <emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 xml:lang="en">1.Agents participate in a process to achieve something (Objective).
+2.Show agency over its action (intentional action) / active and efficient cause of certain effect.
+3. Non-rigid (anti-rigid from OntoClean perspective - that an agent may not always be identified as so)
+4.Act on behalf of another agent or person.</emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9>
+        <rdfs:label>Agent</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">An active and efficient cause, capable of producing a certain effect; a substance that exerts some force or effect.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Individual people or groups of people, like an institution with a legal recognition, who have the potential to perform intentional actions for which they can be held responsible.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">individual and identifiable entity capable of performing actions.</rdfs:seeAlso>
+        <skos:altLabel>Actor</skos:altLabel>
+        <skos:definition xml:lang="en">An atom is a basic unit of matter consisting of a nucleus within a cloud of one or more electrons and is the smallest unit of ordinary matter that forms a chemical element.</skos:definition>
+        <skos:hiddenLabel>Cognitive agent</skos:hiddenLabel>
+        <AnnotationVocabulary:explanatoryNote xml:lang="en">Standard Theory of Action: According to this view, a being has the capacity to exercise agency just in case it has the capacity to act intentionally, and the exercise of agency consists in the performance of intentional actions and, in many cases, in the performance of unintentional actions (that derive from the performance of intentional actions).
+First claim: intentional action is more fundamental than action itself: action derives from and is dependent on intentional action
+Second claim: Following Aristotle, both Davidson and Anscombe held the view that to act intentionally is to act for a reason, and that to act for a reason is to act in a way that can be rationalized by the premises of a sound practical syllogism, which consists, typically, of a major premise that corresponds to the agent’s goal and a minor premise that corresponds to the agent’s take on how to attain the goal. Furthermore, Davidson held the view that having an intention consists in having a desire and a belief that correspond to the major and the minor premise of the relevant syllogism.
+Many problems with standard theory of actions: Difficult to explain for non-human cases, e.g., lower order animals, collective, and artificial.
+Special note on artificial agency: If one presumes the standard theory, one faces the question of whether it is appropriate to attribute mental states to artificial systems. If one takes an instrumentalist stance (Dennett 1987: Ch. 2), there is no obvious obstacle to the attribution of mental states and intentional agency to artificial systems. According to realist positions, however, it is far from obvious whether or not this is justified, because it is far from obvious whether or not artificial systems have internal states that ground the ascription of representational mental states. 
+Neo-classical explanations:
+event-causal approach: agency is to be explained in terms of event-causal relations between agent-involving states and events.
+agent-causal approach: agency is to be explained in terms of a kind of substance-causation: causation by the agent, construed as a persisting substance.
+According to a volitionist approach, agency is to be explained in terms of acts of the will, usually called “volitions”. 
+Note: If we take event-causal approach seriously, agent does not deserve any special ontological treatment. “disappearing agent”.</AnnotationVocabulary:explanatoryNote>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#e254e2c3-b430-4ddd-a032-2e2b88ea47a8"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">An active and efficient cause, capable of producing a certain effect; a substance that exerts some force or effect.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>http://wordnetweb.princeton.edu/perl/webwn?o2=&amp;o0=1&amp;o8=1&amp;o1=1&amp;o7=&amp;o5=&amp;o9=&amp;o6=&amp;o3=&amp;o4=&amp;s=AGENT&amp;i=0&amp;h=00100000#c</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#e254e2c3-b430-4ddd-a032-2e2b88ea47a8"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">Individual people or groups of people, like an institution with a legal recognition, who have the potential to perform intentional actions for which they can be held responsible.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://eur-lex.europa.eu/content/help/eurlex-content/eli.html</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#e254e2c3-b430-4ddd-a032-2e2b88ea47a8"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">individual and identifiable entity capable of performing actions.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://www.wikidata.org/wiki/Q24229398</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

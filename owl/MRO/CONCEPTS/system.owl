@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/arkop/ontologies/2023/7/untitled-ontology-303#"
+     xml:base="http://www.semanticweb.org/arkop/ontologies/2023/7/untitled-ontology-303"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:emmo="http://emmo.info/emmo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:metadata="http://www.ontocommons.edu/common/metadata#"
+     xmlns:common-annotation="http://www.purl.ontocommons.edu/tro/common-annotation#"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+     xmlns:AnnotationVocabulary1="https://purl.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+    <owl:Ontology rdf:about="http://www.ontolocommons.eu/mro/bridge">
+        <owl:imports rdf:resource="http://emmo.info/emmo/1.0.0-beta2/middle"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/iso/2020/bfo.owl"/>
+        <owl:imports rdf:resource="http://www.loa.istc.cnr.it/dolce/dolce-owl/DOLCEbasic"/>
+        <owl:imports rdf:resource="http://www.ontocommons.eu/common/metadata"/>
+        <terms:description xml:lang="en">Contains bridge concept &quot;System&quot;.</terms:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontolocommons.eu/mro/bridge#b2cb5aa4-4b5b-4a7e-bdb9-9ac6084d1a2d -->
+
+    <owl:Class rdf:about="http://www.ontolocommons.eu/mro/bridge#b2cb5aa4-4b5b-4a7e-bdb9-9ac6084d1a2d">
+        <rdfs:label>System</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">A system is a construct or collection of different elements that together produce results not obtainable by the elements alone. The elements, or parts, can include people, hardware, software, facilities, policies, and documents; that is, all things required to produce system-level results. The results include system-level qualities, properties, characteristics, functions, behavior, and performance. The value added by the system as a whole, beyond that contributed independently by the parts, is primarily created by the relationship among the parts; that is, how they are interconnected.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">A system is a group of interacting or interrelated elements that act according to a set of rules to form a unified whole.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">A system is a portion of the universe that has been chosen for studying the changes that take place within it in response to varying conditions.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">Instrumentality that combines interrelated interacting artifacts designed to work as a coherent entity.
+A group of independent but interrelated elements comprising a unified whole.</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">System An integrated set of interoperable elements, each with explicitly specified and bounded capabilities, working synergistically to perform value-added processing to enable a User to satisfy mission-oriented operational needs in a prescribed operating environment with a specified outcome and probability of success.</rdfs:seeAlso>
+        <skos:definition xml:lang="en">System is an integrated set of interoperable elements that is capable of achieving some objective, which no individual element can achieve alone, if operated according to a prescribed operational environment, through a controlled interactions of the elements.</skos:definition>
+        <skos:hiddenLabel>Arrangement</skos:hiddenLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#b2cb5aa4-4b5b-4a7e-bdb9-9ac6084d1a2d"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">A system is a construct or collection of different elements that together produce results not obtainable by the elements alone. The elements, or parts, can include people, hardware, software, facilities, policies, and documents; that is, all things required to produce system-level results. The results include system-level qualities, properties, characteristics, functions, behavior, and performance. The value added by the system as a whole, beyond that contributed independently by the parts, is primarily created by the relationship among the parts; that is, how they are interconnected.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://www.nasa.gov/sites/default/files/atoms/files/nasa_systems_engineering_handbook_0.pdf</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#b2cb5aa4-4b5b-4a7e-bdb9-9ac6084d1a2d"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">A system is a group of interacting or interrelated elements that act according to a set of rules to form a unified whole.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://en.wikipedia.org/wiki/System</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#b2cb5aa4-4b5b-4a7e-bdb9-9ac6084d1a2d"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">A system is a portion of the universe that has been chosen for studying the changes that take place within it in response to varying conditions.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://www.britannica.com/science/system-physics</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#b2cb5aa4-4b5b-4a7e-bdb9-9ac6084d1a2d"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">Instrumentality that combines interrelated interacting artifacts designed to work as a coherent entity.
+A group of independent but interrelated elements comprising a unified whole.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>http://wordnetweb.princeton.edu/perl/webwn?o2=&amp;o0=1&amp;o8=1&amp;o1=1&amp;o7=&amp;o5=&amp;o9=&amp;o6=&amp;o3=&amp;o4=&amp;s=System&amp;h=000000000&amp;j=0#c</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.ontolocommons.eu/mro/bridge#b2cb5aa4-4b5b-4a7e-bdb9-9ac6084d1a2d"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">System An integrated set of interoperable elements, each with explicitly specified and bounded capabilities, working synergistically to perform value-added processing to enable a User to satisfy mission-oriented operational needs in a prescribed operating environment with a specified outcome and probability of success.</owl:annotatedTarget>
+        <AnnotationVocabulary:excerptedFrom>https://www.wiley.com/en-us/System+Analysis,+Design,+and+Development:+Concepts,+Principles,+and+Practices-p-9780471728245</AnnotationVocabulary:excerptedFrom>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
